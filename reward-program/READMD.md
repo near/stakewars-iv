@@ -11,7 +11,7 @@ While the engineering team is doing their best to make a secure and reliable pro
 Starts ~2 weeks after StatelessNet launch and lasts throughout the entire duration of StatelessNet
 
 ### Participation guideline
-* A participant can study stateless validation code or play with StatelessNet to identify failure points and submit a bug/issue report in stakewars-iv repo using the following template: **TBD** .
+* A participant can study stateless validation code or play with StatelessNet to identify failure points and submit a bug/issue report in stakewars-iv repo using the following template: [HERE](reward-program/bug-reports/template.md) .
 * A report should be made on the designated GitHub repository (link TBD) and only the first reporter of a new issue with a valid report will be rewarded
 * A report must include the following to be considered for reward
   * Detailed explanation of an issue/bug 
