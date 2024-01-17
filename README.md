@@ -21,7 +21,7 @@ The entire duration of StatelessNet will be approximately two months, from Febru
 * Stage 1, February, 2024: StatelessNet will focus on demonstrating functional readiness of upcoming changes. MVP version of stateless validation with minimal optimization will be released first and followed by iterations on feature completeness.
 * Stage 2, starting in March, 2024: Once all critical features for stateless validation are implemented and corner cases are addressed, StatelessNet will move on to the next stage, focusing on performance and reliability optimization. Multiple rounds of load tests and stress tests will be conducted to test the limit of stateless validation and identify bottlenecks. Engineering focus will be around optimizations on performance and reliability. 
 
-### Reward program
+### [Reward program](reward-program.md)
 While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn some NEAR token by participating in the reward program. More details can be found HERE.
 
 There are two major ways to participation in the reward program:
