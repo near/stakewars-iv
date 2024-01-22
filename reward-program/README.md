@@ -65,8 +65,9 @@ Stage 2 of stateless validation StatelessNet.
 * (TBD) A participant must submit a traffic generation proposal and coordinate with the Protocol engineering team to start the test. While this adds additional burden, this is to make sure that each stress test is properly monitored and does not interfere with one another.
 * A proposal should be submitted on the designated GitHub repository (link TBD) and will be reviewed in order.
 * A proposal must include the following
-  * Overview of the test plan and what type of traffic the participant aims to generate
+  * Overview of the test plan and what type of traffic the participant aims to generate.
   * Target traffic volume and required tokens needed to generate the traffic for the agreed time
+  * Traffic should be large enough to prove/challenge scalability/stability of the network.
   * Reproduction steps with necessary scripts/codes (in case the engineering team needs to replay in the future)
 * Generated traffic should be notable and original in at least one aspect to be considered eligible for a reward
   * [Note] Detailed TBD on what’s invalid needs to be shared upfront, e.g. Repetitive FT transfer
@@ -80,7 +81,7 @@ Stage 2 of stateless validation StatelessNet.
   * Med: the traffic pattern the protocol engineering team discussed in the past, but never tried before
   * Low: the traffic pattern the protocol engineering team tested in the past
 * Outcome
-  * Success: traffic was successfully generated 
+  * Success: traffic was successfully generated.
   * Failure: test was failed to be conducted for various reasons (participant unavailability, bug in script, etc)
 
 ### Multiplier
