@@ -1,20 +1,20 @@
 # Reward program
 
 ## Overview
-TBD
+The Stake Wars IV reward program is designed to incentivize external participants to collaborate with the Near Protocol team to find any potential issues and bugs in the new sharding implementation - the Stateless Validation. The program is split into two parts - the bug bounty and the traffic generation. We invite everyone to participate and help make the Near Protocol better and safer. 
 
-## Bug/issue bounty
+## Bug bounty
 ### Overview
 While the engineering team is doing their best to make a secure and reliable product, we are all human and things can be overlooked. On mainnet, a bug bounty program has helped identify critical bugs and having a similar bug bounty program on StatelessNet can reveal issues we are not able to find ourselves. 
 
 ### Duration
-Starts ~2 weeks after StatelessNet launch and lasts throughout the entire duration of StatelessNet
+The bug bounty program will start approximately 2 weeks after the Stake Wars IV launch and it will last throughout the entire duration of Stake Wars IV.
 
 ### Participation guideline
-* A participant can study stateless validation code or play with StatelessNet to identify failure points and submit a bug/issue report in stakewars-iv repo using the following template: [HERE](reward-program/bug-reports/template.md) .
+* A participant can study stateless validation code, join the Stake Wars IV network or interact with it to identify failure points and submit bug reports in the stakewars-iv repo using the following template: [HERE](bug-reports/template.md) .
 * A report should be made on the designated GitHub repository (link TBD) and only the first reporter of a new issue with a valid report will be rewarded
 * A report must include the following to be considered for reward
-  * Detailed explanation of an issue/bug 
+  * Detailed explanation of an issue or a bug 
     * Affected parties
       * Who is affected? Validators? Contract developers? 
     * Impact
@@ -22,14 +22,14 @@ Starts ~2 weeks after StatelessNet launch and lasts throughout the entire durati
     * Reproduction steps
 * A report may include the following to be considered for a larger reward
   * Root cause analysis with specific code location
-  * Suggested fix for bug/issue
+  * Suggested fix for the bug or issue
 
 ### Reward assessment criteria
 * Criticality:
   * P0: Must be fixed before mainnet launch due its impact if exploited. (e.g. can result in monetary damage of others or token minting out of thin air)
   * P1: Not required for the initial launch but should be a blocker for future iterations as it can hinder reliability/scalability (e.g. can cause the chain stall or involuntary validator kickout)
   * P2: Not likely to cause a major issue in the near future but good to have (e.g. short term slow down of block processing time)
-  * N/A: Not an issu[e / Wishlist
+  * N/A: Not an issue / Wishlist
 * Report completeness
   * High: The report contains the exact code pointers and suggested fix that can be a long term solution
   * Medium: The report contains the exact code pointers and suggested fix that works but either with compromises or is a short term solution
@@ -48,13 +48,13 @@ Starts ~2 weeks after StatelessNet launch and lasts throughout the entire durati
 
 ### Reward calculation example
 * Report with exact code pointers and long term solution on the issue with P0 criticality
-  * N * 2 * 1.5 = 3*N
+  * N * 2 * 1.5 = 3N
 * Report with code pointers and short term fix on the issue with P1 criticality
-  * N * 1 * 1.2 = 1.2*N
+  * N * 1 * 1.2 = 1.2N
 
 ## Traffic generation
 ### Overview
-Since the mainnet launch, Protocol engineering team has experienced multiple events where unprecedented traffic patterns result in different outcomes the team could not think of. Based on such experience, the team concluded that stress testing the network with various traffics can reveal its weakness and things to improve.
+Since the mainnet launch, Protocol engineering team has experienced multiple events where unprecedented traffic patterns resulted in different outcomes the team could not think of. Based on such experience, the team concluded that stress testing the network with various traffics can reveal its weakness and things to improve.
 
 On the StatelessNet, a participant can support the effort by generating a creative traffic at large volume that can push various parts of protocol infrastructure to their limits. 
 
@@ -66,9 +66,9 @@ Stage 2 of stateless validation StatelessNet.
 * A proposal should be submitted on the designated GitHub repository (link TBD) and will be reviewed in order.
 * A proposal must include the following
   * Overview of the test plan and what type of traffic the participant aims to generate
-  * Target traffic volume
+  * Target traffic volume and required tokens needed to generate the traffic for the agreed time
   * Reproduction steps with necessary scripts/codes (in case the engineering team needs to replay in the future)
-* Generated traffic should be be notable in at least one aspect to be considered valid
+* Generated traffic should be notable and original in at least one aspect to be considered eligible for a reward
   * [Note] Detailed TBD on what’s invalid needs to be shared upfront, e.g. Repetitive FT transfer
 
 ### Reward assessment criteria
