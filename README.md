@@ -9,7 +9,7 @@ In Q2 2024, NEAR protocol will introduce the biggest upgrade since its mainnet l
 
 The upgrade will be transparent and blockchain users should not experience any downtime and no special treatment from validators will be required, apart from adjusting the hw specs to the new node roles.. Once stateless validation is in place, it will open the door to a series of additional network performance and scalability improvements.
 
-~~If you want to know more about stateless validation, please refer to the following document: HERE~~
+If you want to know more about stateless validation, please refer to the [following document](https://github.com/near/NEPs/blob/229d1e298dfafd03025ce832b22cfcdd9a4d6231/neps/nep-0509.md)
 
 ## What is Stateless validation StatelessNet?
 Considering the critical nature of upcoming changes, Protocol engineering team concluded that it is important to inform the community as early as possible so users can 1) understand how they are going to be affected (or not affected) once the changes are applied in Mainnet and 2) provide feedbacks to Protocol engineering team so the protocol upgrade can be more robust and reliable.
@@ -21,7 +21,7 @@ The entire duration of StatelessNet will be approximately two months, from Febru
 * Stage 1, February, 2024: StatelessNet will focus on demonstrating functional readiness of upcoming changes. MVP version of stateless validation with minimal optimization will be released first and followed by iterations on feature completeness.
 * Stage 2, starting in March, 2024: Once all critical features for stateless validation are implemented and corner cases are addressed, StatelessNet will move on to the next stage, focusing on performance and reliability optimization. Multiple rounds of load tests and stress tests will be conducted to test the limit of stateless validation and identify bottlenecks. Engineering focus will be around optimizations on performance and reliability. 
 
-### [Reward program](reward-program/READMD.md)
+### [Reward program](reward-program/README.md)
 While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn some NEAR token by participating in the reward program. More details can be found HERE.
 
 There are two major ways to participation in the reward program:
