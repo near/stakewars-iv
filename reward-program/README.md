@@ -8,7 +8,7 @@ The Stake Wars IV reward program is designed to incentivize external participant
 While the engineering team is doing their best to make a secure and reliable product, we are all human and things can be overlooked. On mainnet, a bug bounty program has helped identify critical bugs and having a similar bug bounty program on StatelessNet can reveal issues we are not able to find ourselves. 
 
 ### Duration
-The bug bounty program will start approximately 2 weeks after the Stake Wars IV launch and it will last throughout the entire duration of Stake Wars IV.
+The bug bounty program will start *approximately 2 weeks (Exact date will be updated here)* after the Stake Wars IV launch and it will last throughout the entire duration of Stake Wars IV.
 
 ### Participation guideline
 * A participant can study stateless validation code, join the Stake Wars IV network or interact with it to identify failure points and submit bug reports in the stakewars-iv repo using the following template: [HERE](bug-reports/template.md) .
