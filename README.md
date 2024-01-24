@@ -19,7 +19,15 @@ Hence, we are introducing Stateless validation StatelessNet. StatelessNet is sim
 ### Timeline
 The entire duration of StatelessNet will be approximately two months, from February 2024 to March 2024. Two stages are planned for StatelessNet, each with different focus areas:
 * Stage 1, February, 2024: StatelessNet will focus on demonstrating functional readiness of upcoming changes. MVP version of stateless validation with minimal optimization will be released first and followed by iterations on feature completeness.
-* Stage 2, starting in March, 2024: Once all critical features for stateless validation are implemented and corner cases are addressed, StatelessNet will move on to the next stage, focusing on performance and reliability optimization. Multiple rounds of load tests and stress tests will be conducted to test the limit of stateless validation and identify bottlenecks. Engineering focus will be around optimizations on performance and reliability. 
+* Stage 2, starting in March, 2024: Once all critical features for stateless validation are implemented and corner cases are addressed, StatelessNet will move on to the next stage, focusing on performance and reliability optimization. Multiple rounds of load tests and stress tests will be conducted to test the limit of stateless validation and identify bottlenecks. Engineering focus will be around optimizations on performance and reliability.
+
+### Notable dates
+Here are couple notable (approximate) dates during duration of the program
+* February 1st: Stake wars iv Stage 1 starts
+* February 14th: Bug bounty reward program starts
+* Feb 29th - March 3rd: NEAR Protocol shares Stateless Validation and Stake Wars with the blockchain community at EthDenver.
+* March 1st: Sake wars iv Stage 2 starts. Traffic generation reward program starts
+* March 31st: Stake wars iv completes
 
 ### [Reward program](reward-program/README.md)
 While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn some NEAR token by participating in the reward program. More details can be found HERE.
