@@ -43,17 +43,17 @@ A participant can generate a meaningful amount of traffic on StatelessNet to str
 ### Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
 
-#### GitHub for reward program
+#### [GitHub for reward program](https://github.com/near/stakewars-iv/tree/main/reward-program)
 Users can submit a bug/issue report to the GitHub repository created specifically for StatelessNet. This will be the main channel for reward program participants to share reports.
 
-#### Near.org for detailed status update
+#### [Near.org for detailed status update](https://near.social/mob.near/widget/ProfilePage?accountId=stake-wars.near)
 Pagoda/Near Foundation will share detailed StatelessNet status updates and progress reports with community members.
 
-#### X (Ex-Twitter) for high level status update
+#### [X (Ex-Twitter) for high level status update](https://twitter.com/NearStakeWars)
 Along with Near.org, Pagoda/Near Foundation will share a brief summary of the StatelessNet status updates and progress reports with community members.
 
-#### Telegram for general Q&A and communication with participants
+#### [Telegram for general Q&A and communication with participants](https://t.me/near_stake_wars)
 Pagoda/Near Foundation will maintain telegram channels for each participant type (e.g. validator, smart contract developer, reward program participant) to answer questions and share important updates that may require timely action, such as binary update request for participating nodes in the StatelessNet network.
 
-#### Zulip for technical support
+#### [Zulip for technical support](https://near.zulipchat.com/#narrow/stream/422293-pagoda.2Fcore.2Fstake-wars-iv/topic/Announcements/near/417508510)
 Users can ask technical questions or request technical support from protocol engineering team.
