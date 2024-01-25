@@ -55,5 +55,5 @@ Along with Near.org, Pagoda/Near Foundation will share a brief summary of the St
 #### [Telegram for general Q&A and communication with participants](https://t.me/near_stake_wars)
 Pagoda/Near Foundation will maintain telegram channels for each participant type (e.g. validator, smart contract developer, reward program participant) to answer questions and share important updates that may require timely action, such as binary update request for participating nodes in the StatelessNet network.
 
-#### [Zulip for technical support](https://near.zulipchat.com/#narrow/stream/422293-pagoda.2Fcore.2Fstake-wars-iv/topic/Announcements/near/417508510)
+#### [Zulip for technical support](https://near.zulipchat.com/#narrow/stream/422293-pagoda.2Fcore.2Fstake-wars-iv/)
 Users can ask technical questions or request technical support from protocol engineering team.
