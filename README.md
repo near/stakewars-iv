@@ -9,7 +9,7 @@ In Q2 2024, NEAR protocol will introduce the biggest upgrade since its mainnet l
 
 The upgrade will be transparent and blockchain users should not experience any downtime and no special treatment from validators will be required, apart from adjusting the hw specs to the new node roles.. Once stateless validation is in place, it will open the door to a series of additional network performance and scalability improvements.
 
-If you want to know more about stateless validation, please refer to the [following document](https://github.com/near/NEPs/blob/229d1e298dfafd03025ce832b22cfcdd9a4d6231/neps/nep-0509.md)
+If you want to know more about stateless validation, please refer to the [following document](https://github.com/near/NEPs/blob/state-validation/neps/nep-0509.md)
 
 ## What is Stateless validation StatelessNet?
 Considering the critical nature of upcoming changes, Protocol engineering team concluded that it is important to inform the community as early as possible so users can 1) understand how they are going to be affected (or not affected) once the changes are applied in Mainnet and 2) provide feedbacks to Protocol engineering team so the protocol upgrade can be more robust and reliable.
