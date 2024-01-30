@@ -30,7 +30,7 @@ Here are couple notable (approximate) dates during duration of the program
 * March 31st: Stake Wars IV completes
 
 ### [Reward program](reward-program/README.md)
-While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn NEAR tokens by participating in the reward program. More details can be found HERE.
+While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn NEAR tokens by participating in the reward program. More details can be found [HERE](reward-program/README.md).
 
 There are three major ways to participate in the reward program:
 
