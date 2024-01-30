@@ -26,19 +26,22 @@ Here are couple notable (approximate) dates during duration of the program
 * February 1st: Stake Wars IV Stage 1 starts
 * February 14th: Bug bounty reward program starts
 * Feb 29th - March 3rd: NEAR Protocol shares Stateless Validation and Stake Wars with the blockchain community at EthDenver.
-* March 1st: Sake Wars IV Stage 2 starts. Traffic generation reward program starts.
+* March 1st: Sake Wars IV Stage 2 starts. Reward programs start for traffic generation and running nodes.
 * March 31st: Stake Wars IV completes
 
 ### [Reward program](reward-program/README.md)
 While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn NEAR tokens by participating in the reward program. More details can be found HERE.
 
-There are two major ways to participate in the reward program:
+There are three major ways to participate in the reward program:
 
 #### Bug/issue report (Available for Stage 1 & 2)
 A participant can study stateless validation code or play with StatelessNet to identify failure points and submit a bug/issue report. The report should contain enough details about the issue and reproduction steps. The submitted report will be assessed and, if valid, the reporter will be rewarded. The reward amount can vary depending on criticality of the uncovered issue and completeness of the report. 
 
 #### Traffic generation (Available for Stage 2)
 A participant can generate a meaningful amount of traffic on StatelessNet to stress-test the network and claim reward. Goal of the program is to understand the capacity of Stateless validation under unexpected traffic in the network and the reward amount will be determined by traffic size and novelty/uniqueness of traffic patterns. For efficient monitoring during traffic generation, each proposal needs to be aligned with the engineering team before execution. 
+
+#### Running a node with high uptime (Available for Stage 2)
+In Stage 2 of the program existing mainnet validators who are running a node in StatelessNet with high uptime are eligible to be rewarded.
 
 ### Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
