@@ -105,4 +105,5 @@ Stage 2 of stateless validation StatelessNet.
 ## Additional reward for top N participants
 The top five participants, based on a number of valid reports and proposals, will get additional reward for their active participation.
 
-
+## Traffic generation
+In Stage 2 of the program existing mainnet validators who are running a node in StatelessNet with high uptime are eligible to be rewarded. More details will be shared soon.
