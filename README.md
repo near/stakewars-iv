@@ -4,41 +4,41 @@ NEAR Protocol is preparing a major update of the core protocol architecture that
 
 ## What are the upcoming changes?
 In Q2 2024, NEAR protocol will introduce the biggest upgrade since its mainnet launch in how the protocol operates, Stateless validation. The upgrade includes the following features:
-* Stateless validation: Validators do not have to track all shards anymore and can retrieve everything they need to validate state change (state witness) over the network. With stateless validation, NEAR can finally achieve true form of sharding and hardware requirements for a validator node can be dramatically reduced. State validation does not require local tracking of any shards as they can retrieve everything they need to validate state change over the network. As a result, hardware requirements for a validator node can be dramatically reduced.
+* Stateless validation: Validators do not have to track all shards anymore and can retrieve everything they need to validate state change (state witness) over the network. With stateless validation, NEAR can finally achieve true form of sharding and hardware requirements for a validator node can be dramatically reduced. State validation does not require local tracking of any shards as nodes can retrieve everything they need to validate state change over the network. As a result, hardware requirements for a validator node can be dramatically reduced.
 * In memory trie: Validator nodes can load the entire state into RAM for maximized performance. With minimized storage access, transaction throughput will be greatly improved. 
 
-The upgrade will be transparent and blockchain users should not experience any downtime and no special treatment from validators will be required, apart from adjusting the hw specs to the new node roles.. Once stateless validation is in place, it will open the door to a series of additional network performance and scalability improvements.
+The upgrade will be transparent and blockchain users should not experience any downtime and no special treatment from validators will be required, apart from adjusting the hw specs to the new node roles. Once stateless validation is in place, it will open the door to a series of additional network performance and scalability improvements.
 
 If you want to know more about stateless validation, please refer to the [following document](https://github.com/near/NEPs/blob/state-validation/neps/nep-0509.md)
 
 ## What is Stateless validation StatelessNet?
-Considering the critical nature of upcoming changes, Protocol engineering team concluded that it is important to inform the community as early as possible so users can 1) understand how they are going to be affected (or not affected) once the changes are applied in Mainnet and 2) provide feedbacks to Protocol engineering team so the protocol upgrade can be more robust and reliable.
+Considering the critical nature of upcoming changes, Protocol engineering team wants to share them with the community as early as possible so users can 1) understand how they are going to be affected (or not affected) once the changes are applied in Mainnet and 2) provide feedback to Protocol engineering team so the protocol upgrade can be more robust and reliable.
 
-Hence, we are introducing Stateless validation StatelessNet. StatelessNet is similar to NEAR Protocol testnet; users can join and participate in various ways, e.g. running a validator node, deploying  a smart contract, and submitting transactions. The main difference is that the nodes in the network are expected to run a binary from the tip of the stateless validation branch, rather than a stable branch. Naturally, StatelessNet aims at fail-fast, fix-fast mode through a tight feedback loop; a new binary may be released multiple times a week, as a result of rapid dynamic interaction between engineering team and participants.
+Hence, we are introducing a new network, based on Stateless validation, called StatelessNet. StatelessNet is similar to NEAR Protocol testnet; users can join and participate in various ways, e.g. running a validator node, deploying  a smart contract, and submitting transactions. The main difference is that the nodes participating in StatelessNet are expected to run a binary from the tip of the stateless validation branch, rather than a stable branch. Naturally, StatelessNet aims at fail-fast, fix-fast mode through a tight feedback loop; a new binary may be released multiple times a week, as a result of rapid dynamic interaction between engineering team and participants.
 
 ### Timeline
-The entire duration of StatelessNet will be approximately two months, from February 2024 to March 2024. Two stages are planned for StatelessNet, each with different focus areas:
+The entire duration of StatelessNet will be approximately two months, from February 2024 to March 2024. Two stages are planned for it, each with different focus areas:
 * Stage 1, February, 2024: StatelessNet will focus on demonstrating functional readiness of upcoming changes. MVP version of stateless validation with minimal optimization will be released first and followed by iterations on feature completeness.
-* Stage 2, starting in March, 2024: Once all critical features for stateless validation are implemented and corner cases are addressed, StatelessNet will move on to the next stage, focusing on performance and reliability optimization. Multiple rounds of load tests and stress tests will be conducted to test the limit of stateless validation and identify bottlenecks. Engineering focus will be around optimizations on performance and reliability.
+* Stage 2, starting in March, 2024: Once all critical features for stateless validation are stabilized and corner cases are addressed, StatelessNet will move on to the next stage, focusing on performance and reliability optimization. Multiple rounds of load tests and stress tests will be conducted to test the limit of stateless validation and identify bottlenecks. Engineering focus will be around optimizations on performance and reliability.
 
 ### Notable dates
 Here are couple notable (approximate) dates during duration of the program
-* February 1st: Stake wars iv Stage 1 starts
+* February 1st: Stake Wars IV Stage 1 starts
 * February 14th: Bug bounty reward program starts
 * Feb 29th - March 3rd: NEAR Protocol shares Stateless Validation and Stake Wars with the blockchain community at EthDenver.
-* March 1st: Sake wars iv Stage 2 starts. Traffic generation reward program starts
-* March 31st: Stake wars iv completes
+* March 1st: Sake Wars IV Stage 2 starts. Traffic generation reward program starts.
+* March 31st: Stake Wars IV completes
 
 ### [Reward program](reward-program/README.md)
-While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn some NEAR token by participating in the reward program. More details can be found HERE.
+While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn NEAR tokens by participating in the reward program. More details can be found HERE.
 
-There are two major ways to participation in the reward program:
+There are two major ways to participate in the reward program:
 
 #### Bug/issue report (Available for Stage 1 & 2)
-A participant can study stateless validation code or play with StatelessNet to identify failure points and submit a bug/issue report. The report should contain enough details about the issue and reproduction steps. The submitted report will be assessed and if valid, the reporter will be rewarded. Amount can vary depending on criticality and completeness of the report. 
+A participant can study stateless validation code or play with StatelessNet to identify failure points and submit a bug/issue report. The report should contain enough details about the issue and reproduction steps. The submitted report will be assessed and, if valid, the reporter will be rewarded. The reward amount can vary depending on criticality of the uncovered issue and completeness of the report. 
 
 #### Traffic generation (Available for Stage 2)
-A participant can generate a meaningful amount of traffic on StatelessNet to stress-test the network and claim reward. Goal of the program is to understand the capacity of Stateless validation under unexpected traffic in the network and reward amount will be determined by traffic size and novelty/uniqueness of traffic patterns. For efficient monitoring during traffic generation, each proposal needs to be aligned with the engineering team before execution. 
+A participant can generate a meaningful amount of traffic on StatelessNet to stress-test the network and claim reward. Goal of the program is to understand the capacity of Stateless validation under unexpected traffic in the network and the reward amount will be determined by traffic size and novelty/uniqueness of traffic patterns. For efficient monitoring during traffic generation, each proposal needs to be aligned with the engineering team before execution. 
 
 ### Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
