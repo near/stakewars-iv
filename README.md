@@ -7,13 +7,10 @@ NEAR Protocol is preparing a major update of the core protocol architecture that
 The entire duration of NEAR Stake Wars IV will be approximately two months, from February till April 2024.
 See the detailed timeline [here](TIMELINE.md).
 
-## How can I participate
+## Participation
 
-TODO  
-[we should mention here how to set up the node, how to generate the traffic, which parameters do we suggest to use, etc - all of these is better to put into separate doc]
+While community members can participate in NEAR Stake Wars IV to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn NEAR tokens by participating in the reward program.
 
-Tech details [here](TECHNICAL_DETAILS.md)
+The instruction for the participants can be found [here](HOW_TO.md), technical details are [here](TECHNICAL_DETAILS.md).
 
-### Rewards 
-
-While community members can join StatelessNet to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn NEAR tokens by participating in the reward program. More details about the rewards can be found [here](reward-program/README.md).
+More details about the rewards can be found [here](reward-program/README.md).

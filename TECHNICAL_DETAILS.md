@@ -11,21 +11,3 @@ If you want to know more about stateless validation, please refer to the [follow
 Considering the critical nature of upcoming changes, Protocol engineering team wants to share them with the community as early as possible so users can 1) understand how they are going to be affected (or not affected) once the changes are applied in Mainnet and 2) provide feedback to Protocol engineering team so the protocol upgrade can be more robust and reliable.
 
 Hence, we are introducing a new network, based on Stateless validation, called StatelessNet. StatelessNet is similar to NEAR Protocol testnet; users can join and participate in various ways, e.g. running a validator node, deploying  a smart contract, and submitting transactions. The main difference is that the nodes participating in StatelessNet are expected to run a binary from the tip of the stateless validation branch, rather than a stable branch. Naturally, StatelessNet aims at fail-fast, fix-fast mode through a tight feedback loop; a new binary may be released multiple times a week, as a result of rapid dynamic interaction between engineering team and participants.
-
-### Support channels
-To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
-
-#### [GitHub for reward program](https://github.com/near/stakewars-iv/tree/main/reward-program)
-Users can submit a bug/issue report to the GitHub repository created specifically for StatelessNet. This will be the main channel for reward program participants to share reports.
-
-#### [Near.org for detailed status update](https://near.social/mob.near/widget/ProfilePage?accountId=stake-wars.near)
-Pagoda/Near Foundation will share detailed StatelessNet status updates and progress reports with community members.
-
-#### [X (Ex-Twitter) for high level status update](https://twitter.com/NearStakeWars)
-Along with Near.org, Pagoda/Near Foundation will share a brief summary of the StatelessNet status updates and progress reports with community members.
-
-#### [Telegram for general Q&A and communication with participants](https://t.me/near_stake_wars)
-Pagoda/Near Foundation will maintain telegram channels for each participant type (e.g. validator, smart contract developer, reward program participant) to answer questions and share important updates that may require timely action, such as binary update request for participating nodes in the StatelessNet network.
-
-#### [Zulip for technical support](https://near.zulipchat.com/#narrow/stream/422293-pagoda.2Fcore.2Fstake-wars-iv/)
-Users can ask technical questions or request technical support from protocol engineering team.
