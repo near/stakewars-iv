@@ -1,15 +1,15 @@
 ## How to join the network?
 
-RPC address: TODO
+RPC address would be provided here shortly.
 
 We recommend you to use [near-cli documentation](https://docs.near.org/tools/near-cli), e.g. how to [create an account](https://docs.near.org/tools/near-cli#near-create-account).
 
 StatelessNet is a sandbox created for load testing purposes.
-The load from mainnet may be forwarded to StatelessNet.
+The traffic from mainnet may be forwarded to StatelessNet.
 It means that all the existing mainnet accounts would be already occupied.
 It will not affect the activity on mainnet in any case.
 
-If you need some tokens for your activity, fill out the form: TODO.
+If you need some tokens for your activity, fill out the form: [the link to the form will be provided shortly].
 
 ## How to become a validator?
 
@@ -20,10 +20,10 @@ You need to build it with the additional argument
 --features statelessnet_protocol
 ```
 
-Sample config: TODO
+Sample config: [will be provided shortly]
 
 In order to be able to create staking pool, you need some tokens.
-Please fill in the validator form: TODO
+Please fill in the validator form: [the link to the form will be provided shortly].
 
 ### Hardware requirements
 
@@ -32,7 +32,7 @@ Assuming the heaviest setup where a node tracks all shards and stores all shards
 - 32GB RAM
 - 8 cores
 
-TODO: add the setup for tracking only 1 shard. We promote StatelessNet as an ability to have more light-weighted validators, we need to show this in practice.
+We will add the requirements for tracking one shard shortly.
 
 ## Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
