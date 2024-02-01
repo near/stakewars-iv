@@ -1,6 +1,12 @@
-# [TEMPLATE] {TITLE}
+---
+name: Bug Report
+about: Report a bug in StatelessNet
+title: ''
+labels: ''
+assignees: ''
 
-## Details
+---
+
 ### Overview
 *Please share high level description of the issue/bug you are reporting.*
 

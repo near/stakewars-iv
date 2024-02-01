@@ -17,7 +17,7 @@ The information for receiving some tokens for user's activity will be provided h
 
 The best place to start is [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
 
-The most recent release of StatelessNet: https://github.com/near/nearcore/releases/tag/statelessnet
+The most recent release of StatelessNet: https://github.com/near/nearcore/tree/statelessnet_latest
 
 You need to build it with the additional argument
 ```
