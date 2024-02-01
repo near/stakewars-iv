@@ -1,6 +1,8 @@
 ## How to join the network?
 
-RPC address will be provided here shortly.
+Available RPC nodes:
+* `rpc.statelessnet.near.org`
+* `archival-rpc.statelessnet.near.org`
 
 We recommend you to use [near-cli documentation](https://docs.near.org/tools/near-cli).  
 The instruction for creating the account will be provided soon as well.
