@@ -3,6 +3,17 @@
 ## Overview
 The Stake Wars IV reward program is designed to incentivize external participants to collaborate with the Near Protocol team to find any potential issues and bugs in the new sharding implementation - the Stateless Validation. The program is split into two parts - the bug bounty and the traffic generation. We invite everyone to participate and help make the Near Protocol better and safer. 
 
+There are three major ways to participate in the reward program:
+
+### Bug/issue report (Available for Stage 1 & 2)
+A participant can study stateless validation code or play with StatelessNet to identify failure points and submit a bug/issue report. The report should contain enough details about the issue and reproduction steps. The submitted report will be assessed and, if valid, the reporter will be rewarded. The reward amount can vary depending on criticality of the uncovered issue and completeness of the report.
+
+### Traffic generation (Available for Stage 2)
+A participant can generate a meaningful amount of traffic on StatelessNet to stress-test the network and claim reward. Goal of the program is to understand the capacity of Stateless validation under unexpected traffic in the network and the reward amount will be determined by traffic size and novelty/uniqueness of traffic patterns. For efficient monitoring during traffic generation, each proposal needs to be aligned with the engineering team before execution.
+
+### Running a node with high uptime (Available for Stage 2)
+In Stage 2 of the program existing mainnet validators who are running a node in StatelessNet with high uptime are eligible to be rewarded.
+
 ## Bug bounty
 ### Overview
 While the engineering team is doing their best to make a secure and reliable product, we are all human and things can be overlooked. On mainnet, a bug bounty program has helped identify critical bugs and having a similar bug bounty program on StatelessNet can reveal issues we are not able to find ourselves. 
