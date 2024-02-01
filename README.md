@@ -13,4 +13,4 @@ While community members can participate in NEAR Stake Wars IV to confirm success
 
 The instruction for the participants can be found [here](HOW_TO.md), technical details are [here](TECHNICAL_DETAILS.md).
 
-More details about the rewards can be found [here](reward-program/README.md).
+More details about the rewards can be found [here](REWARDS.md).
