@@ -14,3 +14,13 @@ While community members can participate in NEAR Stake Wars IV to confirm success
 The instruction for the participants can be found [here](HOW_TO.md), technical details are [here](TECHNICAL_DETAILS.md).
 
 More details about the rewards can be found [here](REWARDS.md).
+
+## StatelessNet is running
+
+February 1st, 2024. StatelessNet was started and currently running with 5 validator nodes, RPC and ARchival nodes. Over the next few days we will gradually expand it and begin sending meaningfull traffic to it.
+
+As a quick overview of the network, you can use the follosing resources:
+* StatelessNet Dashboard: https://nearinc.grafana.net/public-dashboards/451b4c15175b476a9fb00953de40f848
+* List of current RPC nodes: rpc.statelessnet.near.org, archival-rpc.statelessnet.near.org (you can add /metrics after the URLs to access a web page with RPC metrics)
+
+Creating an account on StatelessNet will be done via an automated web service, that will be available shortly. Until then, you can use the following form to request an account, and we will generate one for you within a day: https://forms.gle/b9qg8Pgp2oLJPwq78
