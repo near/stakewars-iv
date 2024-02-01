@@ -24,3 +24,7 @@ As a quick overview of the network, you can use the follosing resources:
 * List of current RPC nodes: rpc.statelessnet.near.org, archival-rpc.statelessnet.near.org (you can add /metrics after the URLs to access a web page with RPC metrics)
 
 Creating an account on StatelessNet will be done via an automated web service, that will be available shortly. Until then, you can use the following form to request an account, and we will generate one for you within a day: https://forms.gle/b9qg8Pgp2oLJPwq78
+
+## StatelessNet status
+
+February 1st, 2024: StatelessNet was started, and nodes are running. We noticed an issue impacting block finality and we are currently investignating it and working on a fix. This issue causes blocks to be missed, kickin out validator nodes. During Stage 1 of Stake Wars IV we expect to find issues what were not previously reproduced,  and to iterate quickly in fixing them and updating the nodes.
