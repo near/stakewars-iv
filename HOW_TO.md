@@ -1,19 +1,23 @@
 ## How to join the network?
 
-RPC address would be provided here shortly.
+RPC address will be provided here shortly.
 
-We recommend you to use [near-cli documentation](https://docs.near.org/tools/near-cli), e.g. how to [create an account](https://docs.near.org/tools/near-cli#near-create-account).
+We recommend you to use [near-cli documentation](https://docs.near.org/tools/near-cli).  
+The instruction for creating the account will be provided soon as well.
 
-StatelessNet is a sandbox created for load testing purposes.
-The traffic from mainnet may be forwarded to StatelessNet.
+StatelessNet is a sandbox created for testing purposes, concentrating both on correctness and performance.
+StatelessNet will be initiated with a copy of mainnet state.
+In the future the protocol team may enable mirroring mainnet traffic in StatelessNet.
 It means that all the existing mainnet accounts would be already occupied.
 It will not affect the activity on mainnet in any case.
 
-If you need some tokens for your activity, fill out the form: [the link to the form will be provided shortly].
+The information for receiving some tokens for user's activity will be provided here soon.
 
 ## How to become a validator?
 
-The most recent release of StatelessNet: https://github.com/near/nearcore/commit/ef5564c4950d448144d23488df8b63d45e6b0209
+The best place to start is [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
+
+The most recent release of StatelessNet: https://github.com/near/nearcore/releases/tag/statelessnet
 
 You need to build it with the additional argument
 ```
@@ -22,7 +26,7 @@ You need to build it with the additional argument
 
 Sample config: [will be provided shortly]
 
-In order to be able to create staking pool, you need some tokens.
+In order to become a validator, you need some tokens.
 Please fill in the validator form: [the link to the form will be provided shortly].
 
 ### Hardware requirements
@@ -32,7 +36,8 @@ Assuming the heaviest setup where a node tracks all shards and stores all shards
 - 32GB RAM
 - 8 cores
 
-We will add the requirements for tracking one shard shortly.
+In later stages of StatelessNet we are planning on enabling single shard tracking.
+The hardware requirements for single shard tracking will be shared then.
 
 ## Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.

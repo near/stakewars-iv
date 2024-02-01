@@ -1,9 +1,14 @@
 ## What are the upcoming changes?
 In Q2 2024, NEAR protocol will introduce the biggest upgrade since its mainnet launch in how the protocol operates, Stateless validation. The upgrade includes the following features:
-* Stateless validation: Validators do not have to track all shards anymore and can retrieve everything they need to validate state change (state witness) over the network. With stateless validation, NEAR can finally achieve true form of sharding and hardware requirements for a validator node can be dramatically reduced. State validation does not require local tracking of any shards as nodes can retrieve everything they need to validate state change over the network. As a result, hardware requirements for a validator node can be dramatically reduced.
-* In memory trie: Validator nodes can load the entire state into RAM for maximized performance. With minimized storage access, transaction throughput will be greatly improved.
+* Stateless validation: Validators do not have to track all shards anymore and can retrieve everything they need to validate the state transition over the network.
+Stateless validation does not require local tracking of any shards as nodes can retrieve everything they need to validate state change over the network.
+As a result, NEAR can finally achieve true form of sharding, and hardware requirements for a validator node can be dramatically reduced.
+* In memory trie: Validator nodes can load the entire state into RAM for maximized performance.
+With minimized storage access, transaction throughput will be greatly improved.
 
-The upgrade will be transparent and blockchain users should not experience any downtime and no special treatment from validators will be required, apart from adjusting the hw specs to the new node roles. Once stateless validation is in place, it will open the door to a series of additional network performance and scalability improvements.
+The upgrade will be transparent, and blockchain users should not experience any downtime.
+No special treatment from validators will be required.
+Once stateless validation is in place, it will open the door to a series of additional network performance and scalability improvements.
 
 If you want to know more about stateless validation, please refer to the [following document](https://github.com/near/NEPs/blob/state-validation/neps/nep-0509.md)
 

@@ -9,5 +9,5 @@ Here are couple notable (approximate) dates during duration of the program
 * February 1st: Stake Wars IV Stage 1 starts
 * February 14th: Bug bounty reward program starts
 * Feb 29th - March 3rd: NEAR Protocol shares Stateless Validation and Stake Wars with the blockchain community at EthDenver.
-* March 1st: Sake Wars IV Stage 2 starts. Reward programs start for traffic generation and running nodes.
+* March 1st: Stake Wars IV Stage 2 starts. Reward programs start for traffic generation and running nodes.
 * March 31st: Stake Wars IV completes
