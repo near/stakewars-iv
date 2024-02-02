@@ -1,19 +1,41 @@
 ## How to join the network?
 
 Available RPC nodes:
-* `rpc.statelessnet.near.org`
-* `archival-rpc.statelessnet.near.org`
+* `https://rpc.statelessnet.near.org`
+* `https://archival-rpc.statelessnet.near.org`
 
-We recommend you to use [near-cli documentation](https://docs.near.org/tools/near-cli).  
-The instruction for creating the account will be provided soon as well.
+We recommend you to use [near-cli-rs](https://docs.near.org/tools/near-cli-rs).  
+Install it with the following command:
+```bash
+cargo install near-cli-rs
+```
+All the examples below are using [near-cli-rs](https://docs.near.org/tools/near-cli-rs), don't be confused with [near-cli](https://docs.near.org/tools/near-cli). The easiest way to figure out which version is the default on your machine is running
+```bash
+near --version
+# Should show you something like
+# near-cli-rs 0.7.7
+```
+
+First, you need to add the new network:
+```bash
+near config add-connection --network-name statelessnet --connection-name statelessnet --rpc-url https://rpc.statelessnet.near.org/ --wallet-url https://rpc.statelessnet.near.org/ --explorer-transaction-url https://rpc.statelessnet.near.org/
+```
+*Only RPC URL is provided correctly in this command, but it's fine because it's the only URL we will use further.*
+
+There's [a tool for creating the account](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/.).
+
+In order to use it, you need a set of keys. This command will help you to obtain the needed data:
+```bash
+near account create-account fund-later use-auto-generation save-to-folder ./<your-account-name>.statelessnet
+```
+
+You'll have 10 tokens available automatically for all your experiments.
 
 StatelessNet is a sandbox created for testing purposes, concentrating both on correctness and performance.
 StatelessNet will be initiated with a copy of mainnet state.
 In the future the protocol team may enable mirroring mainnet traffic in StatelessNet.
 It means that all the existing mainnet accounts would be already occupied.
 It will not affect the activity on mainnet in any case.
-
-The information for receiving some tokens for user's activity will be provided here soon.
 
 ## How to become a validator?
 

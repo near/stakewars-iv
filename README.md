@@ -22,8 +22,8 @@ February 1st, 2024. StatelessNet was started and currently running with 5 valida
 As a quick overview of the network, you can use the following resources:
 * [StatelessNet Dashboard](https://nearinc.grafana.net/public-dashboards/451b4c15175b476a9fb00953de40f848)
 * List of current RPC nodes: 
-  * `rpc.statelessnet.near.org`
-  * `archival-rpc.statelessnet.near.org`
+  * `https://rpc.statelessnet.near.org`
+  * `https://archival-rpc.statelessnet.near.org`
 
 You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
@@ -31,6 +31,10 @@ Creating an account on StatelessNet will be done via an automated web service, t
 Until then, you can use [the form to request an account](https://forms.gle/b9qg8Pgp2oLJPwq78), and we will generate one for you within a day.
 
 ## StatelessNet status
+
+#### February 2nd, 2024
+
+We added [the instruction](HOW_TO.md) how to create the account and how to use the network.
 
 #### February 1st, 2024
 
