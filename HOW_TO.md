@@ -77,7 +77,7 @@ Please fill in the validator form: [the link to the form will be provided shortl
 Assuming the heaviest setup where a node tracks all shards and stores all shards in memory:
 - 1TB disk
 - 32GB RAM
-- 8 cores
+- 8 physical cores
 
 In later stages of StatelessNet we are planning on enabling single shard tracking. The hardware requirements for single shard tracking will be shared then.
 
