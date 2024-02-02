@@ -1,23 +1,22 @@
 # NEAR Stake Wars IV: Attack of Transactions
 
-NEAR Protocol is preparing a major update of the core protocol architecture that takes scalability to the next level. This update is called stateless validation, and it has ample impact on how the network operates internally. We invite everyone to join an early access network that runs on this new architecture, StatelessNet, and run a stateless validator node or test the network throughput and scalability.
+NEAR Protocol is preparing a major update of the core protocol architecture that takes scalability to the next level. This update is called stateless validation, and it has ample impact on how the network operates internally. We invite everyone to join an early access network that runs on this new architecture, StatelessNet, and run a stateless validator node or test the network throughput and scalability. StatelessNet is separate from mainnet and testnet.
 
 ## Timeline
 
-The entire duration of NEAR Stake Wars IV will be approximately two months, from February till April 2024.
-See the detailed timeline [here](TIMELINE.md).
+The entire duration of NEAR Stake Wars IV will be approximately two months, from February untill April 2024. For more information see the detailed timeline [here](TIMELINE.md).
 
 ## Participation
 
-While community members can participate in NEAR Stake Wars IV to confirm successful execution of their use cases or simply to fulfill their curiosity, they can also use the opportunity to earn NEAR tokens by participating in the reward program.
+Anyone can participate in NEAR Stake Wars IV by joining StatelessNet to confirm successful execution of their use cases, poke arround, run a validator node, or simply to fulfill their curiosity. There is also the opportunity to earn NEAR tokens by participating in the reward programs.
 
-The instruction for the participants can be found [here](HOW_TO.md), technical details are [here](TECHNICAL_DETAILS.md).
+The instruction for joining StatelessNet can be found [here](HOW_TO.md), and the technical details of the network are [here](TECHNICAL_DETAILS.md).
 
-More details about the rewards can be found [here](REWARDS.md).
+More details about the reward programs can be found [here](REWARDS.md).
 
-## StatelessNet is running
+## Announcements
 
-February 1st, 2024. StatelessNet was started and currently running with 5 validator nodes, RPC and Archival nodes. Over the next few days we will gradually expand it and begin sending meaningful traffic to it.
+February 1st, 2024: StatelessNet was started and is currently running with 5 validator nodes, RPC and Archival nodes. Over the next few days we will gradually expand it and begin sending meaningful traffic to it.
 
 As a quick overview of the network, you can use the following resources:
 * [StatelessNet Dashboard](https://nearinc.grafana.net/public-dashboards/451b4c15175b476a9fb00953de40f848)
@@ -27,14 +26,11 @@ As a quick overview of the network, you can use the following resources:
 
 You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
-Creating an account on StatelessNet will be done via an automated web service, that will be available shortly.
-Until then, you can use [the form to request an account](https://forms.gle/b9qg8Pgp2oLJPwq78), and we will generate one for you within a day.
-
 ## StatelessNet status
 
 #### February 2nd, 2024
 
-We added [the instruction](HOW_TO.md) how to create the account and how to use the network.
+We added [instructions](HOW_TO.md) on how to create an account on StatelessNer and how to use the network.
 
 #### February 1st, 2024
 
