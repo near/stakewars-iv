@@ -57,20 +57,14 @@ Notes
 
 ### 4.1 Basic instructions
 
-The best place to start is [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
-
-The most recent release of StatelessNet: https://github.com/near/nearcore/tree/statelessnet_latest
-
-You need to build it with the additional argument
+* Compiling and running a near node is detailes in the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
+* The most recent release of near client code for StatelessNet is at https://github.com/near/nearcore/tree/statelessnet_latest
+* Building instructions: you need to build it with the additional argument
 ```
 --features statelessnet_protocol
 ```
-
-Sample config: [will be provided shortly]
-
-In order to become a validator, you need some tokens.
-
-Please fill in the validator form: [the link to the form will be provided shortly].
+* Sample config: [will be provided shortly]
+* Stake: In order to become a validator, you need some tokens. Please fill in the validator form: [the link to the form will be provided shortly].
 
 ### 4.2 Hardware requirements
 
