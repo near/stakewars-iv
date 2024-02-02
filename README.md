@@ -30,7 +30,7 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 #### February 2nd, 2024
 
-We added [instructions](HOW_TO.md) on how to create an account on StatelessNer and how to use the network.
+We added [instructions](HOW_TO.md) on how to create an account on StatelessNet and how to use the network.
 
 #### February 1st, 2024
 
