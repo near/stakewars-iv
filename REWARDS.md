@@ -59,8 +59,9 @@ The bug bounty program will start *approximately 2 weeks (Exact date will be upd
   * Medium: 1.2x
   * Low: 1x
  
-### 2.6 Possible reward range
-**150 NEAR - 450 NEAR**, depending on quality of a report
+### 2.6 Reward amount
+* Baseline reward amount: **150 NEAR**
+* Possible reward range: **150 NEAR - 450 NEAR**, depending on quality of a report
 
 ### 2.7 Reward calculation example
 * Report with exact code pointers and long term solution on the issue with P0 criticality
@@ -112,8 +113,9 @@ Stage 2 of stateless validation StatelessNet.
   * Success: 1x
   * Failure: 0.2x
  
-### 3.6 Possible reward range
-**75 NEAR - 1,125 NEAR**, depending on volume, novelty and outcome of traffic generation attempt.
+### 3.6 Reward amount
+* Baseline reward amount: **500 NEAR**
+* Possible reward range: **75 NEAR - 1,125 NEAR**, depending on volume, novelty and outcome of traffic generation attempt.
 
 ### 3.7 Reward calculation example
 * High volume test with medium novelty of traffic pattern -> test success
