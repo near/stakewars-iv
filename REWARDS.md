@@ -128,4 +128,4 @@ The top five participants, based on a number of valid reports and proposals, wil
 
 ## 5. Running a node with high uptime (Available for Stage 2)
 
-In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens. For this reward, only mainnet validators active as of March 1st 2024 are eligible. Details around the uptime threshold and how it is measured will published in the last week of February 2024. 
+In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens. For this reward, only mainnet validators active as of March 1st 2024 are eligible. We will have up to 100 rewards (for up to 100 participants), each reward being 150 NEAR Tokens. Details around the uptime threshold and how it is measured will published in the last week of February 2024. 
