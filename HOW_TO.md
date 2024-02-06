@@ -58,7 +58,7 @@ Notes
 ### 4.1 Basic instructions
 
 * Compiling and running a near node is detailes in the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
-* The most recent release of near client code for StatelessNet is [statelessnet-81.0](https://github.com/near/nearcore/releases/tag/statelessnet-81.0) from 2024-02-01
+* The most recent release of near client code for StatelessNet is [statelessnet-81.1]([https://github.com/near/nearcore/releases/tag/statelessnet-81.0](https://github.com/near/nearcore/releases/tag/statelessnet-81.1)) from 2024-02-06
 * Building instructions: you need to build it with the additional argument
 ```
 --features statelessnet_protocol
