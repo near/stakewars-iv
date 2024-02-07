@@ -6,22 +6,27 @@ Available RPC and archival nodes:
 * `https://rpc.statelessnet.near.org`
 * `https://archival-rpc.statelessnet.near.org`
 
-## 2. near-cli support
+## 2. Required tools
 
-We recommend using [near-cli-rs](https://docs.near.org/tools/near-cli-rs). Install it with the following command:
+### 2.1 `near-cli`, `near-cli-rs`
+At first, we need to install both [near-cli](https://docs.near.org/tools/near-cli) and [near-cli-rs](https://docs.near.org/tools/near-cli-rs).
+They are not similar, and having both of them will slightly simplify the process for you.  
+Both of them will try to use the same name `near`.
+Let's solve this issue:
 ```bash
+npm install -g near-cli
+cd /usr/local/bin
+sudo mv near near-js
 cargo install near-cli-rs
-```
-All the examples below are using [near-cli-rs](https://docs.near.org/tools/near-cli-rs), don't confuse it with [near-cli](https://docs.near.org/tools/near-cli).
-
-The easiest way to figure out which near cli version is the default on your machine is running
-```bash
-near --version
-# Should show you something like
-# near-cli-rs 0.7.7
+sudo ln -s ~/.cargo/bin/near ./near
 ```
 
-First, you need to add the new network:
+If you have any issues during the installation, it's better to check the documentation of [near-cli](https://docs.near.org/tools/near-cli) and [near-cli-rs](https://docs.near.org/tools/near-cli-rs).
+
+In the examples below, we use `near` for [near-cli-rs](https://docs.near.org/tools/near-cli-rs), and `near-js` for [near-cli](https://docs.near.org/tools/near-cli).
+
+### 2.2 Adding the network
+
 ```bash
 near config add-connection --network-name statelessnet --connection-name statelessnet --rpc-url https://rpc.statelessnet.near.org/ --wallet-url https://rpc.statelessnet.near.org/ --explorer-transaction-url https://rpc.statelessnet.near.org/
 ```
@@ -29,10 +34,10 @@ near config add-connection --network-name statelessnet --connection-name statele
 
 ## 3. Create an account on StatelessNet
 
-There is no wallet developped for StatelessNet. Account creation is handled via a web serivce (available [here](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/)) and interaction with the account is later done via near-cli.
+There is no wallet developed for StatelessNet. Account creation is handled via a web serivce (available [here](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/)) and interaction with the account is later done via near-cli.
 
 In order to use the [web service for creating the account](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/), you need to provide two things: (1) an account name and (2) a public key.
-1. Account name: the account name has to be in the format <your-account-name>.statelessnet, and has to respect the NEAR [account ID rules](https://nomicon.io/DataStructures/Account#account-id-rules). Note that StatelessNet does NOT support [implicit accounts](https://nomicon.io/DataStructures/Account#implicit-account-ids).
+1. Account name: the account name has to be in the format `<your-account-name>.statelessnet`, and has to respect the NEAR [account ID rules](https://nomicon.io/DataStructures/Account#account-id-rules). Note that StatelessNet does NOT support [implicit accounts](https://nomicon.io/DataStructures/Account#implicit-account-ids).
 2. Public key (part of a private/public key pair):
    Using near-cli-rs, this command will generate the keys:
 ```bash
@@ -42,9 +47,12 @@ The name here (`<your-account-name>.statelessnet`) is just for file naming and d
 
 Locate the public key: find the file `<your-account-name>.statelessnet` in the specified folder. Open the file. The public key is found under `public_key` and looks like `ed25519:....` Copy all the string of the key, including the "`ed25519:`" part.
 
-Enter the account name and the a public key in the web service page, press "Create Account" and your account will be automatically created. You'll also receive 10 StatelessNet tokens for all your experiments.
+Enter the account name and the public key in the web service page, press "Create Account" and your account will be automatically created.
+You'll also receive 10 StatelessNet tokens for all your experiments which is enough for any type of manual testing.
 
-Notes
+If 10 StatelessNet tokens is not enough for your experiments, be ready to create the [Traffic Generation Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=traffic-generation-proposal.md&title=), and then fill in [the form](https://docs.google.com/forms/d/e/1FAIpQLSf8auAbg7KbcBaWG-u69T0UjsXszqyBL4bKMU2m5gK9QX7pXA/viewform).
+
+#### Notes
 * StatelessNet is a sandbox created for testing purposes, concentrating both on correctness and performance.
 * StatelessNet will be initiated with a copy of mainnet state.
 * In the future the protocol team may enable mirroring mainnet traffic in StatelessNet.
@@ -65,7 +73,6 @@ In later stages of StatelessNet we are planning on enabling single shard trackin
 ### 4.2 Instruction
 
 This is a short version inspired by the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
-
 
 ```bash
 # Install some basic stuff
