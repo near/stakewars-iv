@@ -137,7 +137,7 @@ In later stages of StatelessNet we are planning on enabling single shard trackin
 --features statelessnet_protocol
 ```
 * Sample config: [will be provided shortly]
-* Stake: In order to become a validator, you need some tokens. Please fill in the validator form: [the link to the form will be provided shortly].
+* Stake: In order to become a validator, you need some tokens. Please create [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and then fill in [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
 
 ## 6. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
