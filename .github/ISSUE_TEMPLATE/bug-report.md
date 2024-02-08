@@ -7,6 +7,7 @@ assignees: ''
 
 ---
 
+## Bug Report
 ### Overview
 *Please share high level description of the issue/bug you are reporting.*
 

@@ -103,13 +103,9 @@ aws s3 --no-sign-request cp --recursive s3://near-protocol-public/backups/statel
 ./target/release/neard --home ~/.near init --chain-id statelessnet
 ```
 
-Then, you need to fix `.near/config.json` a little, changing 2 lines in the beginning of the file:
-```
-  "genesis_file": "data/genesis.json",
-  "genesis_records_file": "data/records.json",
-```
+Then, replace `.near/config.json` with [the new file](config.json), and we are almost there.
+It takes around 5-7 minutes to operate normally
 
-We are almost there. It takes around 5-7 minutes to operate normally
 ```bash
 cd ~/nearcore/
 ./target/release/neard --home ~/.near run
@@ -138,6 +134,21 @@ In later stages of StatelessNet we are planning on enabling single shard trackin
 ```
 * Sample config: [will be provided shortly]
 * Stake: In order to become a validator, you need some tokens. Please create [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and then fill in [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
+
+### 5.3 Check the status
+
+You can check the current list of the validators with [near-cli](https://docs.near.org/tools/near-cli):
+
+```bash
+near-js validators current --node_url https://rpc.statelessnet.near.org
+```
+
+If you wait to be included into the validators list, it's also useful to check the list for the next epoch:
+```bash
+near-js proposals --node_url https://rpc.statelessnet.near.org
+near-js validators next --node_url https://rpc.statelessnet.near.org
+```
+
 
 ## 6. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
