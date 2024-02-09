@@ -14,7 +14,7 @@ They are not similar, and having both of them will slightly simplify the process
 Both of them will try to use the same name `near`.
 Let's solve this issue:
 ```bash
-npm install -g near-cli
+npm install -g near-cli@3.5.0 # There's an issue with the latest release, please use 3.5.0 for now
 cd /usr/local/bin
 sudo mv near near-js
 cargo install near-cli-rs
@@ -59,7 +59,7 @@ If 10 StatelessNet tokens is not enough for your experiments, be ready to create
 * It means that all the existing mainnet accounts would be already occupied.
 * StatelessNet will not affect the activity on mainnet in any case.
 
-## 4. How to run read-only node?
+## 4. How to run a node?
 
 ### 4.1 Hardware requirements
 
@@ -70,7 +70,7 @@ Assuming the heaviest setup where a node tracks all shards and stores all shards
 
 In later stages of StatelessNet we are planning on enabling single shard tracking. The hardware requirements for single shard tracking will be shared then.
 
-### 4.2 Instruction
+### 4.2 Read-only node instruction
 
 This is a short version inspired by the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
 
@@ -111,31 +111,52 @@ cd ~/nearcore/
 ./target/release/neard --home ~/.near run
 ```
 
-## 5. How to become a validator?
+### 4.3 Validator instruction
 
-*This section is work in progress. We will update it soon with a more crisp description for how to run a node.*
+Same as before, this instruction is inspired by the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
+You may search for more detailed information there.
 
-### 5.1 Hardware requirements
+In order to become a validator, you need to go through [previous step](HOW_TO.md#42-read-only-node-instruction) at first.
 
-Assuming the heaviest setup where a node tracks all shards and stores all shards in memory:
-- 1TB disk
-- 32GB RAM
-- 8 physical cores
+Also, you need some tokens. Please create [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and fill in [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
 
-In later stages of StatelessNet we are planning on enabling single shard tracking. The hardware requirements for single shard tracking will be shared then.
 
-### 5.2 Basic instructions
+#### Updating `validator_key.json`
 
-* Compiling and running a near node is detailed in the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
-* The most recent release of near client code for StatelessNet is [statelessnet-81.1](https://github.com/near/nearcore/releases/tag/statelessnet-81.1) from 2024-02-06
-* Building instructions: you need to build it with the additional argument
+Then, you need to update your `~/.near/validator_key.json` file.
+It should contain the following fields:
+```json
+{
+   "account_id": "your-account.statelessnet",
+   "public_key": "ed25519:...",
+   "secret_key": "ed25519:..."
+}
 ```
---features statelessnet_protocol
-```
-* Sample config: [will be provided shortly]
-* Stake: In order to become a validator, you need some tokens. Please create [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and then fill in [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
 
-### 5.3 Check the status
+You have everything needed in the file you saw after the creation of your account.
+`secret_key` corresponds to `private_key`.
+
+#### Staking the StatelessNet tokens
+
+We decided to keep everything simple, there are no staking pools for now.
+
+```bash
+near-js stake --networkId statelessnet --nodeUrl https://rpc.statelessnet.near.org --amount <your-amount> --accountId <your-account-dot-statelessnet> --stakingKey <your-public-key-without-ed25519:>
+```
+
+Minimal amount is also known as the seat price, which can be found by the command
+
+```bash
+near-js validators next --node_url https://rpc.statelessnet.near.org
+```
+
+#### Restarting the node
+
+We need to help node see the new `validator_key.json` file.
+
+And voilà! After 2 epochs, if everything was fine, you should be a validator.
+
+### 4.4 Check the status
 
 You can check the current list of the validators with [near-cli](https://docs.near.org/tools/near-cli):
 
@@ -143,12 +164,19 @@ You can check the current list of the validators with [near-cli](https://docs.ne
 near-js validators current --node_url https://rpc.statelessnet.near.org
 ```
 
-If you wait to be included into the validators list, it's also useful to check the list for the next epoch:
+There's also a list for the next epoch:
+
 ```bash
-near-js proposals --node_url https://rpc.statelessnet.near.org
 near-js validators next --node_url https://rpc.statelessnet.near.org
 ```
 
+And for the epoch after the next:
+
+```bash
+near-js proposals --node_url https://rpc.statelessnet.near.org
+```
+
+So, if you wait to be included into the validators list, your username should gradually appear in the responses from the last to the first command.
 
 ## 6. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.

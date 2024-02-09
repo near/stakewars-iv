@@ -25,13 +25,3 @@ As a quick overview of the network, you can use the following resources:
   * `https://archival-rpc.statelessnet.near.org`
 
 You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
-
-## 4. StatelessNet status
-
-#### February 2nd, 2024
-
-We added [instructions](HOW_TO.md) on how to create an account on StatelessNet and how to use the network.
-
-#### February 1st, 2024
-
-StatelessNet was started, and nodes are running. We noticed an issue impacting block finality and we are currently investignating it and working on a fix. This issue causes blocks to be missed, kickin out validator nodes. During Stage 1 of Stake Wars IV we expect to find issues what were not previously reproduced,  and to iterate quickly in fixing them and updating the nodes.
