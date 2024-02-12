@@ -8,46 +8,32 @@ Available RPC and archival nodes:
 
 ## 2. Required tools
 
-### 2.1 `near-cli`, `near-cli-rs`
-At first, we need to install both [near-cli](https://docs.near.org/tools/near-cli) and [near-cli-rs](https://docs.near.org/tools/near-cli-rs).
-They are not similar, and having both of them will slightly simplify the process for you.  
-Both of them will try to use the same name `near`.
-Let's solve this issue:
-```bash
-npm install -g near-cli@3.5.0 # There's an issue with the latest release, please use 3.5.0 for now
-cd /usr/local/bin
-sudo mv near near-js
-cargo install near-cli-rs
-sudo ln -s ~/.cargo/bin/near ./near
-```
+### 2.1 `near-cli`
+To install [near-cli](https://docs.near.org/tools/near-cli) we simply need to run: `npm install -g near-cli`. If you have any issues during the installation, please check the [official documentation](https://docs.near.org/tools/near-cli)
 
-If you have any issues during the installation, it's better to check the documentation of [near-cli](https://docs.near.org/tools/near-cli) and [near-cli-rs](https://docs.near.org/tools/near-cli-rs).
-
-In the examples below, we use `near` for [near-cli-rs](https://docs.near.org/tools/near-cli-rs), and `near-js` for [near-cli](https://docs.near.org/tools/near-cli).
-
-### 2.2 Adding the network
+### 2.2 Setting up the network
+We will be using a network different from `testnet` and `mainnet`, for which we need to setup a specific `RPC`
 
 ```bash
-near config add-connection --network-name statelessnet --connection-name statelessnet --rpc-url https://rpc.statelessnet.near.org/ --wallet-url https://rpc.statelessnet.near.org/ --explorer-transaction-url https://rpc.statelessnet.near.org/
+export NEAR_CUSTOM_RPC=https://rpc.statelessnet.near.org/
 ```
-*Only RPC URL is provided correctly in this command, but it's fine because it's the only URL we will use further.*
 
 ## 3. Create an account on StatelessNet
 
-There is no wallet developed for StatelessNet. Account creation is handled via a web serivce (available [here](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/)) and interaction with the account is later done via near-cli.
+There is no wallet developed for StatelessNet. Account creation is handled via a web sevice (available [here](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/)) and interaction with the account is later done via near-cli.
 
 In order to use the [web service for creating the account](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/), you need to provide two things: (1) an account name and (2) a public key.
-1. Account name: the account name has to be in the format `<your-account-name>.statelessnet`, and has to respect the NEAR [account ID rules](https://nomicon.io/DataStructures/Account#account-id-rules). Note that StatelessNet does NOT support [implicit accounts](https://nomicon.io/DataStructures/Account#implicit-account-ids).
-2. Public key (part of a private/public key pair):
-   Using near-cli-rs, this command will generate the keys:
-```bash
-near account create-account fund-later use-auto-generation save-to-folder ./<your-account-name>.statelessnet
-```
-The name here (`<your-account-name>.statelessnet`) is just for file naming and doesn't need to match any specific account.
 
-Locate the public key: find the file `<your-account-name>.statelessnet` in the specified folder. Open the file. The public key is found under `public_key` and looks like `ed25519:....` Copy all the string of the key, including the "`ed25519:`" part.
+Choose an account name ([account ID rules](https://nomicon.io/DataStructures/Account#account-id-rules)) and use `near-cli` to generate local credentials:
+
+```bash
+near generate-key <your-account-name>.statelessnet --networkId custom
+```
+
+This will print a `keyPair` in the console with the `publicKey` and `secretKey`. These values will also be saved on the key file in `~/.near-credentials/custom/<your-account-name>.statelessnet.json`. Open the file. The public key is found under `public_key` and looks like `ed25519:....` Copy all the string of the key, including the "`ed25519:`" part.
 
 Enter the account name and the public key in the web service page, press "Create Account" and your account will be automatically created.
+
 You'll also receive 10 StatelessNet tokens for all your experiments which is enough for any type of manual testing.
 
 If 10 StatelessNet tokens is not enough for your experiments, be ready to create the [Traffic Generation Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=traffic-generation-proposal.md&title=), and then fill in [the form](https://docs.google.com/forms/d/e/1FAIpQLSf8auAbg7KbcBaWG-u69T0UjsXszqyBL4bKMU2m5gK9QX7pXA/viewform).
@@ -141,13 +127,13 @@ You have everything needed in the file you saw after the creation of your accoun
 We decided to keep everything simple, there are no staking pools for now.
 
 ```bash
-near-js stake --networkId statelessnet --nodeUrl https://rpc.statelessnet.near.org --amount <your-amount> --accountId <your-account-dot-statelessnet> --stakingKey <your-public-key-without-ed25519:>
+near stake <your-account-id.statelessnet> <your-public-key-without-ed25519:> <your-amount> --networkId custom
 ```
 
 Minimal amount is also known as the seat price, which can be found by the command
 
 ```bash
-near-js validators next --node_url https://rpc.statelessnet.near.org
+near validators next --networkId custom
 ```
 
 #### Restarting the node
@@ -161,22 +147,29 @@ And voilà! After 2 epochs, if everything was fine, you should be a validator.
 You can check the current list of the validators with [near-cli](https://docs.near.org/tools/near-cli):
 
 ```bash
-near-js validators current --node_url https://rpc.statelessnet.near.org
+near validators current --networkId custom
 ```
 
 There's also a list for the next epoch:
 
 ```bash
-near-js validators next --node_url https://rpc.statelessnet.near.org
+near validators next --networkId custom
 ```
 
 And for the epoch after the next:
 
 ```bash
-near-js proposals --node_url https://rpc.statelessnet.near.org
+near validators proposals --networkId custom
 ```
 
 So, if you wait to be included into the validators list, your username should gradually appear in the responses from the last to the first command.
+
+## 5. Common Errors
+Please make sure to define the `NEAR_CUSTOM_RPC`, and to add the `--networkId custom` flag to all commands!
+
+```bash
+export NEAR_CUSTOM_RPC=https://rpc.statelessnet.near.org/
+```
 
 ## 6. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
