@@ -25,3 +25,25 @@ As a quick overview of the network, you can use the following resources:
   * `https://archival-rpc.statelessnet.near.org`
 
 You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
+
+## 4. StatelessNet status
+
+#### February 12th, 2024
+
+* Fixed issue related to 35% missed chunks for all validator. Now there are 0% missed chunks for zero tx load 
+* Conducted loadtest. Achieved 300 RPS but some validator missed 80% chunks. Investigating 
+* Keeping working on improving test coverage 
+* Working on mitigating disk usage increase by 200 GB for state proofs 
+* Working on enabling single shard tracking and in-memory trie
+
+#### February 9th, 2024
+
+Added instructions for read-only node and becoming a validator.
+
+#### February 2nd, 2024
+
+We added instructions on how to create an account on StatelessNet and how to use the network.
+
+#### February 1st, 2024
+
+StatelessNet was started, and nodes are running. We noticed an issue impacting block finality and we are currently investignating it and working on a fix. This issue causes blocks to be missed, kickin out validator nodes. During Stage 1 of Stake Wars IV we expect to find issues what were not previously reproduced, and to iterate quickly in fixing them and updating the nodes.
