@@ -2,7 +2,7 @@
 
 ## Program status update
 ### February 14th, 2024
-Bug bounty program is live as of February 14th, 2024. If you would like to participate, please make sure to check out [reported issues in stakewars-iv repository with reward-program-bug-bounty label](https://github.com/near/stakewars-iv/issues) and [reported issues with stateless-validation label](https://github.com/near/nearcore/labels/A-stateless-validation) in nearcore repository to avoid duplicate reporting.
+Bug bounty program is **LIVE** as of February 14th, 2024. If you would like to participate, please make sure to check out [reported issues in stakewars-iv repository with reward-program-bug-bounty label](https://github.com/near/stakewars-iv/issues) and [reported issues with stateless-validation label](https://github.com/near/nearcore/labels/A-stateless-validation) in nearcore repository to avoid duplicate reporting.
 
 ## 1. Overview
 
