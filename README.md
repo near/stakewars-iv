@@ -28,6 +28,9 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### February 14th, 2024
+Bug bounty program is now **LIVE** as of February 14th, 2024. To avoid dupilicate reports, participants are recommended to check out [reported issues in stakewars-iv repository with reward-program-bug-bounty label](https://github.com/near/stakewars-iv/issues) and [reported issues with stateless-validation label](https://github.com/near/nearcore/labels/A-stateless-validation) in nearcore repository.
+
 #### February 12th, 2024
 
 * Fixed issue related to 35% missed chunks for all validator. Now there are 0% missed chunks for zero tx load 
