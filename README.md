@@ -31,6 +31,11 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 #### February 14th, 2024
 Bug bounty program is now **LIVE** as of February 14th, 2024. To avoid dupilicate reports, participants are recommended to check out [reported issues in stakewars-iv repository with reward-program-bug-bounty label](https://github.com/near/stakewars-iv/issues) and [reported issues with stateless-validation label](https://github.com/near/nearcore/labels/A-stateless-validation) in nearcore repository.
 
+* Found that many missing chunks during loadtest were caused by state witnesses being orphaned. We planned to resolve it later but now we started working on proper solution as this becomes a higher priority.
+* Reduced disk usage required to generate state proofs.
+* Found an insidious FlatStorage issue causing node startup time increase when shard has zero load. Made temporary fix and working on the proper one.
+* Keep discussing what should be the validator roles distribution.
+
 #### February 12th, 2024
 
 * Fixed issue related to 35% missed chunks for all validator. Now there are 0% missed chunks for zero tx load 
