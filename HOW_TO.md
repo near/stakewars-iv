@@ -177,7 +177,7 @@ To maximize transparency throughout the process and provide timely support for t
 ### [GitHub for reward program](https://github.com/near/stakewars-iv/tree/main/reward-program)
 Users can submit a bug/issue report to the GitHub repository created specifically for StatelessNet. This will be the main channel for reward program participants to share reports.
 
-### [Near.org for detailed status update](https://near.social/mob.near/widget/ProfilePage?accountId=stake-wars.near)
+### [Near.org for detailed status update](https://near.org/mob.near/widget/ProfilePage?accountId=stake-wars.near)
 Pagoda/Near Foundation will share detailed StatelessNet status updates and progress reports with community members.
 
 ### [X (Ex-Twitter) for high level status update](https://twitter.com/NearStakeWars)
