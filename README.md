@@ -28,6 +28,13 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### February 16th, 2024
+
+* With new release, every validator can track **only one shard** which they validate. This is a crucial feature allowing to reduce HW requirements and make NEAR more scalable.
+* Made progress on new validator rewards model.
+* Made progress on enabling in-memory trie which should make transaction processing 2x faster.
+
+
 #### February 14th, 2024
 Bug bounty program is now **LIVE** as of February 14th, 2024. To avoid dupilicate reports, participants are recommended to check out [reported issues in stakewars-iv repository with reward-program-bug-bounty label](https://github.com/near/stakewars-iv/issues) and [reported issues with stateless-validation label](https://github.com/near/nearcore/labels/A-stateless-validation) in nearcore repository.
 
