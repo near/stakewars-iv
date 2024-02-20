@@ -18,13 +18,19 @@ Anyone can participate for this reward.
 
 ### 1.2 Traffic generation (Available for Stage 2)
 
-A participant can generate a meaningful amount of traffic on StatelessNet to stress-test the network and claim rewards. Goal of the program is to understand the capacity of Stateless validation under unexpected traffic in the network. The reward amount will be determined by traffic size and novelty/uniqueness of traffic patterns. For efficient monitoring during traffic generation, each proposal needs to be aligned with the engineering team before execution.
+A participant can generate a meaningful amount of traffic on StatelessNet to stress-test the network and claim rewards.
+The goal of the program is to understand the capacity of Stateless validation under unexpected traffic in the network.
+The reward amount will be determined by traffic size and novelty/uniqueness of traffic patterns.
+For efficient monitoring during traffic generation, each proposal needs to be aligned with the engineering team before execution.
 
-Anyone can participate for this reward.
+Anyone who filled in the [Traffic Generation Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=traffic-generation-proposal.md&title=) can participate for this reward.
 
 ### 1.3 Running a validator node with high uptime (Available for Stage 2)
 
-In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens. For this reward, only mainnet validators active as of March 1st 2024 are eligible. Details around the uptime threshold and how it is measured will be published in the last week of February 2024. 
+In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens.
+For this reward, only mainnet validators active as of March 1st 2024 are eligible.
+Also, it's required to fill in [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
+Details around the uptime threshold and how it is measured will be published in the last week of February 2024. 
 
 ## 2. Bug bounty
 
