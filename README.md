@@ -23,6 +23,7 @@ As a quick overview of the network, you can use the following resources:
 * List of current RPC nodes: 
   * `https://rpc.statelessnet.near.org`
   * `https://archival-rpc.statelessnet.near.org`
+ * [Explorer page](https://legacy.explorer.statelessnet.near.org/)
 
 You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
