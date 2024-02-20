@@ -22,9 +22,9 @@ A participant can generate a meaningful amount of traffic on StatelessNet to str
 
 Anyone can participate for this reward.
 
-### 1.3 Running a node with high uptime (Available for Stage 2)
+### 1.3 Running a validator node with high uptime (Available for Stage 2)
 
-In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens. For this reward, only mainnet validators active as of March 1st 2024 are eligible. Details around the uptime threshold and how it is measured will published in the last week of February 2024. 
+In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens. For this reward, only mainnet validators active as of March 1st 2024 are eligible. Details around the uptime threshold and how it is measured will be published in the last week of February 2024. 
 
 ## 2. Bug bounty
 

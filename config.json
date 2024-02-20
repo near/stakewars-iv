@@ -22,7 +22,7 @@
     "limits_config": {
       "json_payload_max_size": 10485760
     },
-    "enable_debug_rpc": false,
+    "enable_debug_rpc": true,
     "experimental_debug_pages_src_path": null
   },
   "telemetry": {

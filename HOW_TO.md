@@ -34,9 +34,8 @@ This will print a `keyPair` in the console with the `publicKey` and `secretKey`.
 
 Enter the account name and the public key in the web service page, press "Create Account" and your account will be automatically created.
 
-You'll also receive 10 StatelessNet tokens for all your experiments which is enough for any type of manual testing.
-
-If 10 StatelessNet tokens is not enough for your experiments, be ready to create the [Traffic Generation Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=traffic-generation-proposal.md&title=), and then fill in [the form](https://docs.google.com/forms/d/e/1FAIpQLSf8auAbg7KbcBaWG-u69T0UjsXszqyBL4bKMU2m5gK9QX7pXA/viewform).
+You'll also receive 60 StatelessNet tokens for all your experiments which is enough for any type of manual testing.
+It's also enough to create staking pool if you wish to become a validator.
 
 #### Notes
 * StatelessNet is a sandbox created for testing purposes, concentrating both on correctness and performance.
@@ -104,8 +103,7 @@ You may search for more detailed information there.
 
 In order to become a validator, you need to go through [previous step](HOW_TO.md#42-read-only-node-instruction) at first.
 
-Also, you need some tokens. Please create [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and fill in [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
-
+Also, if you are [eligible for the validator rewards](REWARDS.md), please create [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and fill in [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
 
 #### Updating `validator_key.json`
 
@@ -124,23 +122,26 @@ You have everything needed in the file you saw after the creation of your accoun
 
 #### Staking the StatelessNet tokens
 
-We decided to keep everything simple, there are no staking pools for now.
+You need to create staking pool.
+You need 50 Statelessnet tokens to perform this operation.
 
 ```bash
-near stake <your-account-id.statelessnet> <your-public-key-without-ed25519:> <your-amount> --networkId custom
+near call pool.statelessnet create_staking_pool '{"staking_pool_id": "your_id", "owner_id": "your-account.statelessnet", "stake_public_key": "ed25519:your-validator-key", "reward_fee_fraction": {"numerator": 10, "denominator": 100}}' --accountId <your-account.statelessnet> --networkId custom --deposit 50 --gas 300000000000000
 ```
 
-Minimal amount is also known as the seat price, which can be found by the command
-
-```bash
-near validators next --networkId custom
-```
+* `staking_pool_id` is a prefix for your pool. If you pass there `apple`, your pool will be `apple.pool.statelessnet`
+* `stake_public_key` can be found at `.near/validator_key.json`
 
 #### Restarting the node
 
 We need to help node see the new `validator_key.json` file.
+If you changed anything there, please restart your node.
 
-And voilà! After 2 epochs, if everything was fine, you should be a validator.
+Then, it's a core's team responsibility to stake into your pool.
+We will review the list of active pools once a day.
+If your pool is ignored for more than one day, please ping us on [Telegram](https://t.me/near_stake_wars).
+
+And voilà! After 2 epochs, if everything is fine, you should be a validator.
 
 ### 4.4 Check the status
 
@@ -163,6 +164,36 @@ near validators proposals --networkId custom
 ```
 
 So, if you wait to be included into the validators list, your username should gradually appear in the responses from the last to the first command.
+
+### Node update
+
+You may see the error like this
+```
+The client protocol version is older than the protocol version of the network. Please update nearcore. 
+```
+
+It means you need to get the fresh version of the code:
+```bash
+cd ~/nearcore/
+git pull
+cargo build --package neard --features statelessnet_protocol --release
+./target/release/neard --home ~/.near run
+```
+
+If you were a validator before, the core team staked some funds, and you were kicked out after that, you probably want to continue validating after you solved the issues with the node.
+For that, stake any amount to your pool.
+
+```bash
+near call your-id.pool.statelessnet deposit_and_stake '{}' --accountId your-account.statelessnet --networkId custom --deposit 1
+```
+
+Then, check if your proposal was accepted.
+
+```bash
+near validators proposals --networkId custom
+```
+
+If you are on this list, you should be a validator again in 2 epochs.
 
 ## 5. Common Errors
 Please make sure to define the `NEAR_CUSTOM_RPC`, and to add the `--networkId custom` flag to all commands!
