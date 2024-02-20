@@ -138,8 +138,8 @@ We need to help node see the new `validator_key.json` file.
 If you changed anything there, please restart your node.
 
 Then, it's a core's team responsibility to stake into your pool.
-We will review the list of active pools once a day.
-If your pool is ignored for more than one day, please ping us on [Telegram](https://t.me/near_stake_wars).
+Closer to the end of February, we will review the list of active pools at least once a day.
+If your pool is ignored for more than one day after February 26, please ping us on [Telegram](https://t.me/near_stake_wars).
 
 And voilà! After 2 epochs, if everything is fine, you should be a validator.
 
