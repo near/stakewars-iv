@@ -29,6 +29,13 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### February 21st, 2024
+
+Continue working on major statelessnet features:
+* Orphan state witnesses cache - clarified condition to restrict size, PR will be moved to review stage soon.
+* Validator roles and rewards model - understood details of current model and discussed concern with increased network costs.
+* In-memory trie - realized the need to improve our TestLoop framework to properly test and enable it. Started working on it.
+
 #### February 16th, 2024
 
 * With new release, every validator can track **only one shard** which they validate. This is a crucial feature allowing to reduce HW requirements and make NEAR more scalable.
