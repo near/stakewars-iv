@@ -105,21 +105,6 @@ In order to become a validator, you need to go through [previous step](HOW_TO.md
 
 Also, if you are [eligible for the validator rewards](REWARDS.md), please create [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and fill in [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
 
-#### Updating `validator_key.json`
-
-Then, you need to update your `~/.near/validator_key.json` file.
-It should contain the following fields:
-```json
-{
-   "account_id": "your-account.statelessnet",
-   "public_key": "ed25519:...",
-   "secret_key": "ed25519:..."
-}
-```
-
-You have everything needed in the file you saw after the creation of your account.
-`secret_key` corresponds to `private_key`.
-
 #### Staking the StatelessNet tokens
 
 You need to create staking pool.
@@ -131,6 +116,21 @@ near call pool.statelessnet create_staking_pool '{"staking_pool_id": "your_id", 
 
 * `staking_pool_id` is a prefix for your pool. If you pass there `apple`, your pool will be `apple.pool.statelessnet`
 * `stake_public_key` can be found at `.near/validator_key.json`
+
+#### Updating `validator_key.json`
+
+Then, you need to update your `~/.near/validator_key.json` file.
+It should contain the following fields:
+```json
+{
+   "account_id": "your-pool.statelessnet",
+   "public_key": "ed25519:...",
+   "secret_key": "ed25519:..."
+}
+```
+
+You have everything needed in the file you saw after the creation of your account.
+`secret_key` corresponds to `private_key`.
 
 #### Restarting the node
 
