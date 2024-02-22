@@ -181,10 +181,10 @@ cargo build --package neard --features statelessnet_protocol --release
 ```
 
 If you were a validator before, the core team staked some funds, and you were kicked out after that, you probably want to continue validating after you solved the issues with the node.
-For that, stake any amount to your pool.
+For that, stake any amount to your pool or just call `ping`:
 
 ```bash
-near call your-id.pool.statelessnet deposit_and_stake '{}' --accountId your-account.statelessnet --networkId custom --deposit 1
+near call your-id.pool.statelessnet ping '{}' --accountId your-account.statelessnet --networkId custom
 ```
 
 Then, check if your proposal was accepted.
