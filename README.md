@@ -29,6 +29,12 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### February 23rd, 2024
+
+* Orphan state witnesses cache is merged. We can resume loadtests on statelessnet soon.
+* Security fix: properly validate first chunk after genesis.
+* Validator roles and rewards model - understood what the new hardware requirements should be. Analyzing historical data on missing chunks to determine chunk producer stake threshold. Plan to share complete view on the model next week.
+
 #### February 22nd, 2024
 
 We started onboarding community validators.
