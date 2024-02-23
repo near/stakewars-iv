@@ -29,6 +29,11 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### February 22nd, 2024
+
+We started onboarding community validators.
+The list of currently running validators, proposals, and other useful information could be found on [the Epoch Info page](http://34.85.179.209:3030/debug/pages/epoch_info).
+
 #### February 21st, 2024
 
 Continue working on major statelessnet features:
