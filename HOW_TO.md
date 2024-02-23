@@ -205,7 +205,7 @@ export NEAR_CUSTOM_RPC=https://rpc.statelessnet.near.org/
 ## 6. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
 
-### [GitHub for reward program](https://github.com/near/stakewars-iv/tree/main/reward-program)
+### [GitHub for reward program](https://github.com/near/stakewars-iv/issues)
 Users can submit a bug/issue report to the GitHub repository created specifically for StatelessNet. This will be the main channel for reward program participants to share reports.
 
 ### [Near.org for detailed status update](https://near.org/mob.near/widget/ProfilePage?accountId=stake-wars.near)
