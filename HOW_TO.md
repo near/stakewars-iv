@@ -123,7 +123,7 @@ Then, you need to update your `~/.near/validator_key.json` file.
 It should contain the following fields:
 ```json
 {
-   "account_id": "your-pool.statelessnet",
+   "account_id": "your-pool.pool.statelessnet",
    "public_key": "ed25519:...",
    "secret_key": "ed25519:..."
 }
