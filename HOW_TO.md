@@ -62,7 +62,7 @@ This is a short version inspired by the [NEAR validators documentation](https://
 ```bash
 # Install some basic stuff
 sudo apt update
-sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python3 docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo awscli
+sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python3 docker.io protobuf-compiler libssl-dev pkg-config clang llvm awscli
 
 # Clone the repo, choose the needed branch
 git clone https://github.com/near/nearcore
