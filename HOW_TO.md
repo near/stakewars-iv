@@ -138,8 +138,8 @@ We need to help node see the new `validator_key.json` file.
 If you changed anything there, please restart your node.
 
 Then, it's a core's team responsibility to stake into your pool.
-Closer to the end of February, we will review the list of active pools at least once a day.
-If your pool is ignored for more than one day after February 26, please ping us on [Telegram](https://t.me/near_stake_wars).
+We review the list of active pools at least once a day.
+If your pool is ignored for more than one day, please ping us on [Telegram](https://t.me/near_stake_wars).
 
 And voilà! After 2 epochs, if everything is fine, you should be a validator.
 
@@ -194,6 +194,8 @@ near validators proposals --networkId custom
 ```
 
 If you are on this list, you should be a validator again in 2 epochs.
+
+An automation script for checking the updates is available [here](update_neard.sh).
 
 ## 5. Common Errors
 Please make sure to define the `NEAR_CUSTOM_RPC`, and to add the `--networkId custom` flag to all commands!
