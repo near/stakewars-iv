@@ -78,14 +78,14 @@ rustup -V
 cargo build --package neard --features statelessnet_protocol --release
 
 # Copy the DB Snapshot
-mkdir ~/.near/data
+mkdir -p ~/.near/data
 cd ~/.near/data
 aws s3 --no-sign-request cp s3://near-protocol-public/backups/statelessnet/rpc/latest .
 latest=$(cat latest)
 aws s3 --no-sign-request cp --recursive s3://near-protocol-public/backups/statelessnet/rpc/$latest .
 
 # Initialise the working directory
-./target/release/neard --home ~/.near init --chain-id statelessnet
+~/nearcore/target/release/neard --home ~/.near init --chain-id statelessnet
 ```
 
 Then, replace `.near/config.json` with [the new file](config.json), and we are almost there.
