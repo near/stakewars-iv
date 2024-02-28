@@ -29,6 +29,13 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### February 28th, 2024
+
+* Improved orphan witnesses GC.
+* Fixed bug with banning the wrong peer if invalid state witness is received.
+* Fixed crash in Option::unwrap when spawning async tasks.
+* Removed obsolete flat storage creation triggers causing some nodes getting stuck.
+
 #### February 23rd, 2024
 
 * Orphan state witnesses cache is merged. We can resume loadtests on statelessnet soon.
