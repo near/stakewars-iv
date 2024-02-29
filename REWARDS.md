@@ -138,4 +138,15 @@ The top five participants, based on a number of valid reports and proposals, wil
 
 ## 5. Running a node with high uptime (Available for Stage 2)
 
-In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens. For this reward, only mainnet validators active as of March 1st 2024 are eligible. We will have up to 100 rewards (for up to 100 participants), each reward being 150 NEAR Tokens. Details around the uptime threshold and how it is measured will published in the last week of February 2024. 
+In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens. The details for this reward are the following:
+* Reward amount: up to 150 NEAR tokens per reward
+* Number of rewards: 100, based on a first come first served approach: we will offer the rewards in order of the form submissions, to the participants that meet the criteria
+* Eligibility criteria:
+  * Be in the active validator set on mainnet on March 1st 2024 14:00 UTC
+  * We will reward one StatelessNet node per mainnet validator pool ID.
+  * Run a node in StatelessNet in March 2024
+  * Have an uptime on StatelessNet of >80%. The uptime is calculated as follows: as average of all epoch uptimes, with uptimes as reported by near-cli, on a timeframe from the moment the node joined the active validator set (or March 1st 2024 14:00 UTC, whichever is last) to March 31st 2024
+  * The size of the reward is scaled to the actual start date of running a node, with 150 NEAR if the node is run starting March 1st 2024. E.g., if a node is run between March 15th - March 31st, then the reward would be 75 NEAR
+* The rewards will be transferred to the owner of the mainnet validator pool ID used when the Validator Request Form was filled in
+
+Note: we encourage participants to join the reward program as close to March 1st as they can, to increase the chance of getting into the set of 100 rewards and to be eligible for the full size of the reward. 
