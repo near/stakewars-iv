@@ -30,6 +30,11 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### March 4th, 2024
+
+* Wallet support is added for StatelssNet: [LINK](https://statelessnet.mynearwallet.com/)
+* Evaluation for traffic generation program is starting on March 4th, 2024
+
 #### February 28th, 2024
 
 * Improved orphan witnesses GC.
