@@ -1,6 +1,9 @@
 # Reward programs
 
 ## Program status update
+### March 4th, 2024
+Evaluation for traffic generation proposals is starting today. As the engineering team is still working on stabilization & optimization of StatelessNet, the team plans to work with the proposer on the actual date that traffic generation will commence (likely to be later part of March). Any additional traffic generation proposals are always welcome. Please have a look at [the program detail](https://github.com/near/stakewars-iv/edit/main/REWARDS.md).
+
 ### February 14th, 2024
 Bug bounty program is **LIVE** as of February 14th, 2024. If you would like to participate, please make sure to check out [reported issues in stakewars-iv repository with reward-program-bug-bounty label](https://github.com/near/stakewars-iv/issues) and [reported issues with stateless-validation label](https://github.com/near/nearcore/labels/A-stateless-validation) in nearcore repository to avoid duplicate reporting.
 
