@@ -24,6 +24,7 @@ As a quick overview of the network, you can use the following resources:
   * `https://rpc.statelessnet.near.org`
   * `https://archival-rpc.statelessnet.near.org`
  * [Explorer page](https://legacy.explorer.statelessnet.near.org/)
+ * Wallet: [https://statelessnet.mynearwallet.com/](https://statelessnet.mynearwallet.com/)
 
 You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
