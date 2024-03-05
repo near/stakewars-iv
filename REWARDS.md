@@ -101,7 +101,7 @@ Stage 2 of stateless validation StatelessNet.
 * All the participants should follow [the provided template](.github/ISSUE_TEMPLATE/traffic-generation-proposal.md);
 * Generated traffic should be notable and original in at least one aspect to be considered eligible for a reward
   * [Note] Detailed TBD on what’s invalid needs to be shared upfront, e.g. Repetitive FT transfer
-  * You can check out the following [link](https://github.com/near/nearcore/tree/master/pytest/tests/loadtest/locust#notes-on-storage-stress-test) to know more about baseline stress test the team is periodically conducting.
+  * You can check out the following [link](https://github.com/near/nearcore/tree/master/pytest/tests/loadtest/locust#available-load-types) to know more about baseline stress test the team is periodically conducting.
 
 ### 3.4 Reward assessment criteria
 * Volume (TBD)
