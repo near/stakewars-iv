@@ -30,6 +30,12 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### March 14th, 2024
+* New statelessnet version is released with the following two features:
+  * state witness soft limit
+  * bypass resharding v3 in statelessnet
+* The team will temporarily stop accepting more traffic generation proposal after March 15th so we can focus on coordinating loadtests for the already approved ones. Once we have better understanding on the loadteset schedule, the team plans to reopen the window and accept additional proposals.
+
 #### March 4th, 2024
 
 * Wallet support is added for StatelssNet: [LINK](https://statelessnet.mynearwallet.com/)
