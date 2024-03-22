@@ -32,7 +32,7 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 #### March 22nd, 2024
 
-* Validator roles and rewards model [https://github.com/near/nearcore/issues/10556#issuecomment-2004647692](was presented) and waits for implementation.
+* Validator roles and rewards model [was presented](https://github.com/near/nearcore/issues/10556#issuecomment-2004647692) and waits for implementation.
 * Working on enabling in-memory trie in StatelessNet.
 * Found that StatelessNet issues during loadtests are related to poor network performance. Working on improving it.
 
