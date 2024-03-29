@@ -30,6 +30,13 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### March 29th, 2024
+
+Introduced new statelessnet version enabling:
+* in-memory trie for significant execution speed up
+* chunk producer shard shuffling for better security testing
+Unfortunately one of the fixes related to proper storage recording stalled the chain. Revert awaiting release.
+
 #### March 22nd, 2024
 
 * Validator roles and rewards model [was presented](https://github.com/near/nearcore/issues/10556#issuecomment-2004647692) and waits for implementation.
