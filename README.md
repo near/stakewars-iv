@@ -35,6 +35,7 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 Introduced new statelessnet version enabling:
 * in-memory trie for significant execution speed up
 * chunk producer shard shuffling for better security testing
+  
 Unfortunately one of the fixes related to proper storage recording stalled the chain. Revert awaiting release.
 
 #### March 22nd, 2024
