@@ -30,6 +30,21 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### April 3rd, 2024
+In light of recent challenges, it has become evident that the current state of StatelessNet does not meet the standards required to adequately serve our community. Both our members and our team have been dedicating considerable time and effort towards resolving issues rather than focusing on essential aspects such as feature development, stabilization, and optimization necessary for the success of our project.
+
+After careful consideration, we have decided it would be more prudent to temporarily suspend operations on StatelessNet until our engineering team can ensure a more stable experience for all community participants. Therefore, we will be pausing StatelessNet effective April 3rd, 2024.
+
+Regarding validator rewards, we will base them on [participants’ runtime](https://github.com/near/stakewars-iv/blob/main/REWARDS.md#13-running-a-validator-node-with-high-uptime-available-for-stage-2). Moreover, recognizing the inconvenience caused by the recent v84 release, we will consider all participants to have maintained 100% runtime from March 28th to April 3rd as compensation. Upon the resumption of StatelessNet, you will have the opportunity to rejoin the network and continue earning rewards. The engineering team is currently analyzing the reward amount calculations and will soon share the results with community participants to coordinate the payout process.
+
+For the traffic generation program, we will continue coordinating tests with you. However, please anticipate a timeline extending from April to May instead of solely April.
+
+Furthermore, this decision may extend the lifecycle of StatelessNet until May.
+
+We will maintain this Telegram channel to answer any questions you may have and provide status updates. However, please note that no technical support will be available during the downtime of StatelessNet.
+
+Thank you for your understanding and continued support.
+
 #### March 29th, 2024
 
 Introduced new statelessnet version enabling:
