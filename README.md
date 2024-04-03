@@ -31,6 +31,7 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 ## 4. StatelessNet status
 
 #### April 3rd, 2024
+**Temporary suspension of StatelessNet**
 In light of recent challenges, it has become evident that the current state of StatelessNet does not meet the standards required to adequately serve our community. Both our members and our team have been dedicating considerable time and effort towards resolving issues rather than focusing on essential aspects such as feature development, stabilization, and optimization necessary for the success of our project.
 
 After careful consideration, we have decided it would be more prudent to temporarily suspend operations on StatelessNet until our engineering team can ensure a more stable experience for all community participants. Therefore, we will be pausing StatelessNet effective April 3rd, 2024.
