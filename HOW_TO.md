@@ -3,39 +3,51 @@
 ## 1. RPC and archival nodes
 
 Available RPC and archival nodes:
-* `https://rpc.statelessnet.near.org`
-* `https://archival-rpc.statelessnet.near.org`
+* `https://rpc.statelessnet.nearone.org`
+* `https://archival-rpc.statelessnet.nearone.org`
 
 ## 2. Required tools
 
-### 2.1 `near-cli`
-To install [near-cli](https://docs.near.org/tools/near-cli) we simply need to run: `npm install -g near-cli`. If you have any issues during the installation, please check the [official documentation](https://docs.near.org/tools/near-cli)
+### 2.1 `near-cli` 
+```bash
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/near/near-cli-rs/releases/latest/download/near-cli-rs-installer.sh | sh
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/near-cli-rs/near-validator-cli-rs/releases/latest/download/near-validator-installer.sh | sh
+source $HOME/.cargo/env
+```
 
 ### 2.2 Setting up the network
 We will be using a network different from `testnet` and `mainnet`, for which we need to setup a specific `RPC`
 
 ```bash
-export NEAR_CUSTOM_RPC=https://rpc.statelessnet.near.org/
+near config add-connection --network-name statelessnet --connection-name statelessnet --rpc-url https://rpc.statelessnet.nearone.org/ --wallet-url https://rpc.statelessnet.nearone.org/ --explorer-transaction-url https://rpc.statelessnet.nearone.org/
 ```
 
 ## 3. Create an account on StatelessNet
 
-There is no wallet developed for StatelessNet. Account creation is handled via a web sevice (available [here](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/)) and interaction with the account is later done via near-cli.
+There is no wallet developed for StatelessNet. Account creation is handled via a [web sevice](TODO) and interaction with the account is later done via near-cli.
 
-In order to use the [web service for creating the account](https://sw4-account-creator-g55a3i3lmq-ey.a.run.app/), you need to provide two things: (1) an account name and (2) a public key.
+In order to use the [web service for creating the account](TODO), you need to provide two things: (1) an account name and (2) a public key.
 
 Choose an account name ([account ID rules](https://nomicon.io/DataStructures/Account#account-id-rules)) and use `near-cli` to generate local credentials:
 
 ```bash
-near generate-key <your-account-name>.statelessnet --networkId custom
+near account create-account fund-later use-auto-generation save-to-folder ~/.near-credentials/statelessnet
 ```
 
-This will print a `keyPair` in the console with the `publicKey` and `secretKey`. These values will also be saved on the key file in `~/.near-credentials/custom/<your-account-name>.statelessnet.json`. Open the file. The public key is found under `public_key` and looks like `ed25519:....` Copy all the string of the key, including the "`ed25519:`" part.
+Check the contents of the resulting file.
+Copy all the string of the `public_key` value, including the "`ed25519:`" part.
 
 Enter the account name and the public key in the web service page, press "Create Account" and your account will be automatically created.
 
-You'll also receive 60 StatelessNet tokens for all your experiments which is enough for any type of manual testing.
+You'll receive 60 StatelessNet tokens for all your experiments which is enough for any type of manual testing.
 It's also enough to create staking pool if you wish to become a validator.
+
+It would be useful to import the resulting account into `near-cli` we installed earlier:
+```bash
+near account import-account using-private-key ed25519:... network-config statelessnet
+```
+
+Since we have testing purposes, and we don't care too much about the security, I suggest using legacy keychain, it will simplify the process.
 
 #### Notes
 * StatelessNet is a sandbox created for testing purposes, concentrating both on correctness and performance.
@@ -62,7 +74,7 @@ This is a short version inspired by the [NEAR validators documentation](https://
 ```bash
 # Install some basic stuff
 sudo apt update
-sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python3 docker.io protobuf-compiler libssl-dev pkg-config clang llvm awscli
+sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python3 docker.io protobuf-compiler libssl-dev pkg-config clang llvm awscli tmux jq
 
 # Clone the repo, choose the needed branch
 git clone https://github.com/near/nearcore
@@ -108,10 +120,10 @@ Also, if you are [eligible for the validator rewards](REWARDS.md), please create
 #### Staking the StatelessNet tokens
 
 You need to create staking pool.
-You need 50 Statelessnet tokens to perform this operation.
+You need 35 Statelessnet tokens to perform this operation.
 
 ```bash
-near call pool.statelessnet create_staking_pool '{"staking_pool_id": "your_id", "owner_id": "your-account.statelessnet", "stake_public_key": "ed25519:your-validator-key", "reward_fee_fraction": {"numerator": 10, "denominator": 100}}' --accountId <your-account.statelessnet> --networkId custom --deposit 50 --gas 300000000000000
+near transaction construct-transaction your-account.statelessnet pool.statelessnet add-action function-call create_staking_pool json-args '{"staking_pool_id": "your-id", "owner_id": "your-account.statelessnet", "stake_public_key": "ed25519:your-validator-key", "reward_fee_fraction": {"numerator": 10, "denominator": 100}}' prepaid-gas '300.0 Tgas' attached-deposit '35 NEAR' skip network-config statelessnet sign-with-legacy-keychain send
 ```
 
 * `staking_pool_id` is a prefix for your pool. If you pass there `apple`, your pool will be `apple.pool.statelessnet`
@@ -123,7 +135,7 @@ Then, you need to update your `~/.near/validator_key.json` file.
 It should contain the following fields:
 ```json
 {
-   "account_id": "your-pool.pool.statelessnet",
+   "account_id": "your-id.pool.statelessnet",
    "public_key": "ed25519:...",
    "secret_key": "ed25519:..."
 }
@@ -145,22 +157,22 @@ And voilà! After 2 epochs, if everything is fine, you should be a validator.
 
 ### 4.4 Check the status
 
-You can check the current list of the validators with [near-cli](https://docs.near.org/tools/near-cli):
+You can check the current list of the validators with [near-cli](https://docs.near.org/tools/near-cli-rs):
 
 ```bash
-near validators current --networkId custom
+near-validator validators network-config statelessnet now
 ```
 
 There's also a list for the next epoch:
 
 ```bash
-near validators next --networkId custom
+near-validator validators network-config statelessnet next
 ```
 
 And for the epoch after the next:
 
 ```bash
-near validators proposals --networkId custom
+near-validator proposals network-config statelessnet
 ```
 
 So, if you wait to be included into the validators list, your username should gradually appear in the responses from the last to the first command.
@@ -184,25 +196,18 @@ If you were a validator before, the core team staked some funds, and you were ki
 For that, stake any amount to your pool or just call `ping`:
 
 ```bash
-near call your-id.pool.statelessnet ping '{}' --accountId your-account.statelessnet --networkId custom
+near contract call-function as-transaction your-id.pool.statelessnet ping json-args {} prepaid-gas '100.0 Tgas' attached-deposit '0 NEAR' sign-as your-account.statelessnet network-config statelessnet sign-with-legacy-keychain send
 ```
 
 Then, check if your proposal was accepted.
 
 ```bash
-near validators proposals --networkId custom
+near-validator proposals network-config statelessnet
 ```
 
 If you are on this list, you should be a validator again in 2 epochs.
 
 An automation script for checking the updates is available [here](update_neard.sh).
-
-## 5. Common Errors
-Please make sure to define the `NEAR_CUSTOM_RPC`, and to add the `--networkId custom` flag to all commands!
-
-```bash
-export NEAR_CUSTOM_RPC=https://rpc.statelessnet.near.org/
-```
 
 ## 6. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
