@@ -1,6 +1,14 @@
 # Reward programs
 
 ## Program status update
+### June 10, 2024
+
+Stage 3 has started.
+TLDR: 
+- There's no longer the reward for bug reports. Though, you are still welcome to open the issue [here](https://github.com/near/stakewars-iv/issues/new?template=bug-report.md).
+- We no longer accept new traffic generation proposals. We will contact all participants with existing proposals directly.
+- Running a validator node reward does not require being an active mainnet validator.
+
 ### March 4th, 2024
 Evaluation for traffic generation proposals is starting today. As the engineering team is still working on stabilization & optimization of StatelessNet, the team plans to work with the proposer on the actual date that traffic generation will commence (likely to be later part of March). Any additional traffic generation proposals are always welcome. Please have a look at [the program detail](https://github.com/near/stakewars-iv/blob/main/REWARDS.md#3-traffic-generation).
 
@@ -9,32 +17,18 @@ Bug bounty program is **LIVE** as of February 14th, 2024. If you would like to p
 
 ## 1. Overview
 
-The Stake Wars IV reward programs are designed to incentivize external participants to collaborate with the Near Protocol team to find potential issues and bugs in the new sharding implementation - the Stateless Validation. We invite everyone to participate and help make the Near Protocol better and safer. 
+The Stake Wars IV reward programs are designed to incentivize external participants to collaborate with the Near Protocol team to find potential issues and bugs in the new sharding implementation - the Stateless Validation.
 
-There are three major ways to participate in the reward programs:
+All rewards are distributed in compliance with T&Cs of Near Foundation which includes need for KYC/KYB, check the details [here](NEAR%20Community%20Events%20Terms%20and%20Conditions.pdf).
 
-### 1.1 Bug/issue report (Available for Stage 1 & 2)
+We invite everyone to participate and help make the Near Protocol better and safer.
 
-A participant can study stateless validation code or play with StatelessNet to identify failure points and submit a bug/issue report. The report should contain enough details about the issue and reproduction steps. The submitted report will be assessed and, if valid, the reporter will be rewarded. The reward amount can vary depending on criticality of the uncovered issue and completeness of the report.
+### 1.1 Running a validator node with high uptime
 
-Anyone can participate for this reward.
+Participants who run a validator node with high uptime can be rewarded in NEAR tokens.  
+It's required to fill in [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
 
-### 1.2 Traffic generation (Available for Stage 2)
-
-A participant can generate a meaningful amount of traffic on StatelessNet to stress-test the network and claim rewards.
-The goal of the program is to understand the capacity of Stateless validation under unexpected traffic in the network.
-The reward amount will be determined by traffic size and novelty/uniqueness of traffic patterns.
-For efficient monitoring during traffic generation, each proposal needs to be aligned with the engineering team before execution.
-
-Anyone who filled in the [Traffic Generation Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=traffic-generation-proposal.md&title=) can participate for this reward.
-
-### 1.3 Running a validator node with high uptime (Available for Stage 2)
-
-In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens.
-For this reward, only mainnet validators active as of March 1st 2024 are eligible.
-Also, it's required to fill in [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
-
-## 2. Bug bounty
+## 2. Bug bounty [no new proposals accepted]
 
 ### 2.1 Overview
 
@@ -81,7 +75,7 @@ The bug bounty program started at February 14th, 2024, and it will last througho
 * Report with code pointers and short term fix on the issue with P1 criticality
   * N * 1 * 1.2 = 1.2N
 
-## 3. Traffic generation
+## 3. Traffic generation [no new proposals accepted]
 
 ### 3.1 Overview
 
@@ -139,19 +133,17 @@ Stage 2 of stateless validation StatelessNet.
 ## 4. Additional reward for top N participants
 The top five participants, based on a number of valid reports and proposals, will get **300 NEAR** as a reward for their active participation.
 
-## 5. Running a node with high uptime (Available for Stage 2)
+## 5. Running a node with high uptime [ACTIVE]
 
-In Stage 2 of the program, participants who run a validator node with high uptime can be rewarded in NEAR tokens. The details for this reward are the following:
-* Reward amount: up to 150 NEAR tokens per month per reward
+Participants who run a validator node with high uptime can be rewarded in NEAR tokens. The details for this reward are the following:
+* Reward amount: up to 150 NEAR tokens per month per reward. If the period is shorter/longer, the reward will be computed accordingly.
 * Number of rewards: 100, based on a first come first served approach: we will offer the rewards in order of the form submissions, to the participants that meet the criteria
 * Eligibility criteria:
-  * Be in the active validator set on mainnet on March 1st 2024 14:00 UTC
-  * We will reward one StatelessNet node per mainnet validator pool ID.
-  * Run a node in StatelessNet in March 2024
-  * Have an uptime on StatelessNet of >80%. The uptime is calculated as follows: as average of all epoch uptimes, with uptimes as reported by near-cli, on a timeframe from the moment the node joined the active validator set (or March 1st 2024 14:00 UTC, whichever is last) to March 31st 2024
-  * The size of the reward is scaled to the actual start date of running a node, with 150 NEAR if the node is run starting March 1st 2024. E.g., if a node is run between March 15th - March 31st, then the reward would be 75 NEAR
-* The rewards will be transferred to the owner of the mainnet validator pool ID used when the Validator Request Form was filled in
-* Those who decide to finish on April 1st, 2024, are still eligible for March reward.
-  In all other cases, quitting the program before the end of the program forfeits your right for the reward.
+  * We will reward one StatelessNet node per one person.
+  * You need to run a validator node in StatelessNet
+  * The node should have an uptime on StatelessNet of >80%. The uptime is calculated as follows: as average of all epoch uptimes, with uptimes as reported by near-cli, on a timeframe from the moment the node joined the active validator set (or June 12 2024 14:00 UTC, whichever is last) until the end of the program (to be announced later).
+  * The size of the reward is scaled to the actual start date of running a node. E.g., if a node started running 15 days after the official start date, then the reward would be 75 NEAR less than the reward for the participants who joined in time.
+* The rewards will be transferred to the mainnet account id provided in Validator Request Form
+* Quitting the program before the end forfeits your right for the reward.
 
-Note: we encourage participants to join the reward program as close to March 1st as they can, to increase the chance of getting into the set of 100 rewards and to be eligible for the full size of the reward.
+Note: we encourage participants to join the reward program as close to start as they can, to increase the chance of getting into the set of 100 rewards and to be eligible for the full size of the reward.
