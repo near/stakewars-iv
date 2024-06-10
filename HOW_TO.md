@@ -24,9 +24,9 @@ near config add-connection --network-name statelessnet --connection-name statele
 
 ## 3. Create an account on StatelessNet
 
-There is no wallet developed for StatelessNet. Account creation is handled via a [web sevice](TODO) and interaction with the account is later done via near-cli.
+There is no wallet developed for StatelessNet. Account creation is handled via a [web service](https://account.statelessnet.nearone.org) and interaction with the account is later done via near-cli.
 
-In order to use the [web service for creating the account](TODO), you need to provide two things: (1) an account name and (2) a public key.
+In order to use the [web service for creating the account](https://account.statelessnet.nearone.org), you need to provide two things: (1) an account name and (2) a public key.
 
 Choose an account name ([account ID rules](https://nomicon.io/DataStructures/Account#account-id-rules)) and use `near-cli` to generate local credentials:
 
@@ -98,15 +98,19 @@ aws s3 --no-sign-request cp --recursive s3://near-protocol-public/backups/statel
 
 # Initialise the working directory
 ~/nearcore/target/release/neard --home ~/.near init --chain-id statelessnet
-```
 
-Then, replace `.near/config.json` with [the new file](config.json), and we are almost there.
-It takes around 5-7 minutes to operate normally
+# Replacing the config file
+cd ~/.near
+rm config.json
+wget https://raw.githubusercontent.com/near/stakewars-iv/main/config.json
+```
 
 ```bash
 cd ~/nearcore/
 ./target/release/neard --home ~/.near run
 ```
+
+It takes around 5-7 minutes to operate normally, you need to ignore all the errors during this time.
 
 ### 4.3 Validator instruction
 
