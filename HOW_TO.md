@@ -65,8 +65,6 @@ Assuming the heaviest setup where a node tracks all shards and stores all shards
 - 32GB RAM
 - 8 physical cores
 
-In later stages of StatelessNet we are planning on enabling single shard tracking. The hardware requirements for single shard tracking will be shared then.
-
 ### 4.2 Read-only node instruction
 
 This is a short version inspired by the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
