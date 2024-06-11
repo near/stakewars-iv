@@ -211,6 +211,36 @@ If you are on this list, you should be a validator again in 2 epochs.
 
 An automation script for checking the updates is available [here](update_neard.sh).
 
+### 4.5 Pinging
+
+If your node is accidentally kicked out, and it's not your fault (it's running fine, there are no issues with the node itself), it's better to return it back ASAP.  
+The easiest way to do this is to create a cron job which pings your pool at least once on each epoch.
+The statelessnet epoch is 5000 blocks, it's a little less than 1.5 hours, so let's ping it once an hour.
+
+```bash
+cd ~
+wget https://raw.githubusercontent.com/near/stakewars-iv/main/ping.sh
+```
+
+Open this file and change 2 things:
+- Your account id
+- Your staking pool account id
+
+Then, let's make it executable and add a cronjob
+```bash
+chmod +x ping.sh
+crontab -e
+```
+
+Choose your preferred editor and add this line to the end of the file
+```text
+0 * * * * ~/ping.sh
+```
+
+Nice, your contract will be pinged each hour.  
+Keep in mind it will not help with the uptime if your node does not feel good.
+You will have to check its state manually from time to time.
+
 ## 6. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
 
