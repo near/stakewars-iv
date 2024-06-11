@@ -290,5 +290,6 @@
     "orphan_state_witness_pool_size": 25,
     "orphan_state_witness_max_size": 40000000,
     "max_loaded_contracts": 256,
-    "save_latest_witnesses": false
+    "save_latest_witnesses": false,
+    "load_mem_tries_for_tracked_shards": true
 }
