@@ -117,7 +117,7 @@
         },
         "min_block_production_delay": {
             "secs": 1,
-            "nanos": 0
+            "nanos": 300000000
         },
         "max_block_production_delay": {
             "secs": 3,
@@ -170,9 +170,7 @@
         "sync_height_threshold": 1
     },
     "tracked_accounts": [],
-    "tracked_shards": [
-        666
-    ],
+    "tracked_shards": [],
     "log_summary_style": "plain",
     "log_summary_period": {
         "secs": 10,
