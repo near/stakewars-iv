@@ -143,8 +143,8 @@ It should contain the following fields:
 }
 ```
 
-You have everything needed in the file you saw after the creation of your account.
-`secret_key` corresponds to `private_key`.
+If you followed the instruction, do not change the public and secret keys, they are already set up correctly.
+You just need to update `account_id` with your pool account id.
 
 #### Restarting the node
 
@@ -218,7 +218,7 @@ The easiest way to do this is to create a cron job which pings your pool at leas
 The statelessnet epoch is 5000 blocks, it's a little less than 1.5 hours, so let's ping it once an hour.
 
 ```bash
-cd ~
+cd /bin/
 wget https://raw.githubusercontent.com/near/stakewars-iv/main/ping.sh
 ```
 
@@ -234,7 +234,7 @@ crontab -e
 
 Choose your preferred editor and add this line to the end of the file
 ```text
-0 * * * * ~/ping.sh
+0 * * * * /bin/ping.sh > /bin/file.txt 2>&1
 ```
 
 Nice, your contract will be pinged each hour.  
