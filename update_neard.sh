@@ -7,7 +7,7 @@ set -euox pipefail
 REPO_NAME="nearcore"
 REPO="https://github.com/near/$REPO_NAME.git"
 BRANCH="statelessnet_latest"
-NEARD_PATH="/home/ubuntu/neard"
+NEARD_PATH=$HOME"/neard"
 
 # Clone the repository if it doesn't exist
 if [ ! -d $REPO_NAME ]; then
