@@ -67,7 +67,21 @@ Assuming the heaviest setup where a node tracks all shards and stores all shards
 - 32GB RAM
 - 8 physical cores
 
-### 4.2 Read-only node instruction
+### 4.2 Network optimizations
+To optimize the network settings for better performance, execute the following commands:
+```bash
+MaxExpectedPathBDP=8388608
+sudo sysctl -w net.core.rmem_max=$MaxExpectedPathBDP
+sudo sysctl -w net.core.wmem_max=$MaxExpectedPathBDP
+sudo sysctl -w net.ipv4.tcp_rmem="4096 87380 $MaxExpectedPathBDP"
+sudo sysctl -w net.ipv4.tcp_wmem="4096 16384 $MaxExpectedPathBDP"
+sudo sysctl -w net.ipv4.tcp_slow_start_after_idle=0
+```
+
+It is required to apply these changes for freshly started node and after each restart.
+
+
+### 4.3 Read-only node instruction
 
 This is a short version inspired by the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
 
@@ -112,7 +126,7 @@ cd ~/nearcore/
 
 It takes around 5-7 minutes to operate normally, you need to ignore all the errors during this time.
 
-### 4.3 Validator instruction
+### 4.4 Validator instruction
 
 Same as before, this instruction is inspired by the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
 You may search for more detailed information there.
@@ -152,6 +166,7 @@ You just need to update `account_id` with your pool account id.
 
 We need to help node see the new `validator_key.json` file.
 If you changed anything there, please restart your node.
+Do not forget to reapply [network optimizations](#42-network-optimizations).
 
 Then, it's a core's team responsibility to stake into your pool.
 We review the list of active pools at least once a day.
@@ -159,7 +174,7 @@ If your pool is ignored for more than one day, please ping us on [Telegram](http
 
 And voilà! After 2 epochs, if everything is fine, you should be a validator.
 
-### 4.4 Check the status
+### 4.5 Check the status
 
 You can check the current list of the validators with [near-cli](https://docs.near.org/tools/near-cli-rs):
 
@@ -181,7 +196,7 @@ near-validator proposals network-config statelessnet
 
 So, if you wait to be included into the validators list, your username should gradually appear in the responses from the last to the first command.
 
-### Node update
+### 4.6 Node update
 
 You may see the error like this
 ```
@@ -213,7 +228,7 @@ If you are on this list, you should be a validator again in 2 epochs.
 
 An automation script for checking the updates is available [here](update_neard.sh).
 
-### 4.5 Pinging
+### 4.7 Pinging
 
 If your node is accidentally kicked out, and it's not your fault (it's running fine, there are no issues with the node itself), it's better to return it back ASAP.  
 The easiest way to do this is to create a cron job which pings your pool at least once on each epoch.
@@ -245,7 +260,7 @@ Nice, your contract will be pinged each hour.
 Keep in mind it will not help with the uptime if your node does not feel good.
 You will have to check its state manually from time to time.
 
-## 6. Support channels
+## 5. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
 
 ### [GitHub for reward program](https://github.com/near/stakewars-iv/issues)
