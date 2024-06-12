@@ -22,6 +22,8 @@ We will be using a network different from `testnet` and `mainnet`, for which we 
 near config add-connection --network-name statelessnet --connection-name statelessnet --rpc-url https://rpc.statelessnet.nearone.org/ --wallet-url https://rpc.statelessnet.nearone.org/ --explorer-transaction-url https://rpc.statelessnet.nearone.org/
 ```
 
+The command above will ask you some questions - just pick "No" or "I don't know" options each time.
+
 ## 3. Create an account on StatelessNet
 
 There is no wallet developed for StatelessNet. Account creation is handled via a [web service](https://account.statelessnet.nearone.org) and interaction with the account is later done via near-cli.
@@ -220,9 +222,11 @@ The statelessnet epoch is 5000 blocks, it's a little less than 1.5 hours, so let
 ```bash
 cd /bin/
 wget https://raw.githubusercontent.com/near/stakewars-iv/main/ping.sh
+which near
 ```
 
-Open this file and change 2 things:
+Open this file and change 3 things:
+- Path to `near` (copy-paste it from `which near` command above)
 - Your account id
 - Your staking pool account id
 
