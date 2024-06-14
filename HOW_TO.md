@@ -131,7 +131,7 @@ It takes around 5-7 minutes to operate normally, you need to ignore all the erro
 Same as before, this instruction is inspired by the [NEAR validators documentation](https://near-nodes.io/validator/compile-and-run-a-node).
 You may search for more detailed information there.
 
-In order to become a validator, you need to go through [previous step](HOW_TO.md#42-read-only-node-instruction) at first.
+In order to become a validator, you need to go through [previous step](HOW_TO.md#43-read-only-node-instruction) at first.
 
 Also, if you are [eligible for the validator rewards](REWARDS.md), please create [Becoming a Validator Proposal](https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=), and fill in [the validator form](https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform).
 
@@ -260,7 +260,88 @@ Nice, your contract will be pinged each hour.
 Keep in mind it will not help with the uptime if your node does not feel good.
 You will have to check its state manually from time to time.
 
-## 5. Support channels
+## 5. Troubleshooting
+
+You've done everything exactly as in this doc, you've received the stake, your node is running for the next 3 epochs.
+
+```bash
+near-validator validators network-config statelessnet now
+```
+
+You run this command and see your node has 0% uptime, or it's not even on the list.
+
+### 5.1 Checking your `validator_key.json`
+
+Re-check [this section](#updating-validator_keyjson).
+The most frequent issue: have you set up your pool account id?
+
+#### Checking the keys are matching
+Let's also check if the keys are fine.
+We'll do it through a small hack.
+Copy-paste the secret key from the `validator_key.json` file
+```bash
+near account import-account using-private-key ed25519:validator-secret-key network-config statelessnet
+```
+It's not actually an account, and we'll never use it, we are doing it just to see the generated public key.
+We need to check if it matches with public key from `validator_key.json` file.
+
+The command will ask you for the account id, let's provide there `not_an_account.statelessnet`.
+It will also ask you some other questions - we just need to save the access key information to the legacy keychain.
+
+```bash
+cat ~/.near-credentials/statelessnet/not_an_account.statelessnet.json
+```
+You need to check if the public key is equal to public key from `validator_key.json` file.
+
+If it's not equal - replace the public key in `validator_key.json` file with the one from the command above.
+
+#### Checking the public key matches the one you provided to your pool
+
+```bash
+near contract call-function as-read-only your-id.pool.statelessnet get_staking_key json-args {} network-config statelessnet now
+```
+
+This public key should match the public key from `validator_key.json` file.
+
+If it's not equal, copy-paste the public key from `validator_key.json` file and run the following
+
+```bash
+near transaction construct-transaction your-account.statelessnet your-id.pool.statelessnet add-action function-call update_staking_key json-args '{"stake_public_key": "ed25519:copy-pasted-key"}' prepaid-gas '100.0 Tgas' attached-deposit '0 NEAR' skip network-config statelessnet sign-with-legacy-keychain send
+```
+
+Don't forget to fill in your account, your pool and the public key.
+
+#### The database
+
+If your node was offline for more than 6 hours, it's better to download the fresh snapshot.
+
+```bash
+rm -r ~/.near/data
+mkdir -p ~/.near/data
+cd ~/.near/data
+aws s3 --no-sign-request cp s3://near-protocol-public/backups/statelessnet/rpc/latest .
+latest=$(cat latest)
+aws s3 --no-sign-request cp --recursive s3://near-protocol-public/backups/statelessnet/rpc/$latest .
+```
+
+#### Sync process
+
+The syncing process looks like a series of INFO messages
+```text
+INFO stats: #119062734 Downloading headers 0.00% (10028 left; at 119162734) 25 peers ⬇ 217 kB/s ⬆ 227 kB/s 0.00 bps 0 gas/s CPU: 9%, Mem: 6.14 GB
+...
+INFO stats: #119087167 Downloading blocks 86.55% (366 left; at 119087167) 32 peers ⬇ 1.79 MB/s ⬆ 148 kB/s 7.90 bps 1.83 Pgas/s CPU: 184%, Mem: 20.6 GB
+```
+
+First, all the headers are downloaded. After that, the blocks are downloaded.
+You need to be sure your downloading process is not endless.
+Number of blocks left should decrease with each new INFO line.
+
+If it doesn't,
+- Check [this section](#42-network-optimizations)
+- Check your internet speed. You need to have 1 Gbps connection
+
+## 6. Support channels
 To maximize transparency throughout the process and provide timely support for the community, multiple support channels will be set up, including Github, Near.org, X, Telegram, and Zulip. At the high level, each channel will be used for the following purposes.
 
 ### [GitHub for reward program](https://github.com/near/stakewars-iv/issues)
