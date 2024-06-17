@@ -36,10 +36,10 @@
         "addr": "0.0.0.0:24567",
         "boot_nodes": "",
         "whitelist_nodes": "",
-        "max_num_peers": 40,
+        "max_num_peers": 100,
         "minimum_outbound_peers": 5,
-        "ideal_connections_lo": 30,
-        "ideal_connections_hi": 35,
+        "ideal_connections_lo": 70,
+        "ideal_connections_hi": 80,
         "peer_recent_time_window": {
             "secs": 600,
             "nanos": 0
