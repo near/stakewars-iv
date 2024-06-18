@@ -30,6 +30,28 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 ## 4. StatelessNet status
 
+#### June 10th, 2024
+
+** Resumption of StatelessNet**
+
+The doc is updated https://github.com/near/stakewars-iv/blob/main/HOW_TO.md
+
+Important reward highlights:
+* The program officially starts on Wednesday, June 12th 2 PM UTC. This is the time when we start monitoring your uptime. You are welcome to join the network earlier, but it won’t be counted towards your update. You can even do it right now, we'll be happy to help you.
+* You don't need to be a mainnet validator to be eligible for the rewards this round but should be technically familiar enough to run a validator node as we won’t have enough bandwidth to handhold you.
+* We no longer give bug bounties. Though, feel free to create the issue if you catch something https://github.com/near/stakewars-iv/issues/new?template=bug-report.md
+* We no longer accept new traffic generation proposals. If you've submitted the proposal earlier, I'll contact you directly to discuss the details and the timeline.
+
+Technical highlights
+It's better just to go through the updated doc: https://github.com/near/stakewars-iv/blob/main/HOW_TO.md
+But there are some things I want to mention specifically:
+* We use near-cli-rs instead of JS-based near-cli this time (see the instruction, you'll enjoy it, I promise)
+* You need to create the account and the pool again https://github.com/near/stakewars-iv/blob/main/HOW_TO.md#3-create-an-account-on-statelessnet
+* You need to fill in the form again https://docs.google.com/forms/d/e/1FAIpQLScmgfOdsxV7c5u4fArn79JBf2MBwFqPIqCVU1x0lAYaZoYuxg/viewform
+It's required because your statelessnet account id may change
+* You also need to create a Validator Proposal https://github.com/near/stakewars-iv/issues/new?assignees=&labels=&projects=&template=becoming-a-validator-proposal.md&title=
+Feel free to use the old proposal link if you participated in the previous round, or create the new one, both options are fine.
+
 #### April 3rd, 2024
 
 **Temporary suspension of StatelessNet**
