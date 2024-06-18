@@ -32,7 +32,9 @@ You can add `/metrics` after the RPC URLs to access a web page with RPC metrics.
 
 #### June 10th, 2024
 
-** Resumption of StatelessNet**
+**Resumption of StatelessNet**
+
+We are happy to announce the next stage of Stake Wars IV!
 
 The doc is updated https://github.com/near/stakewars-iv/blob/main/HOW_TO.md
 
