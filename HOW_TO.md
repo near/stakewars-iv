@@ -78,8 +78,15 @@ sudo sysctl -w net.ipv4.tcp_wmem="4096 16384 $MaxExpectedPathBDP"
 sudo sysctl -w net.ipv4.tcp_slow_start_after_idle=0
 ```
 
-It is required to apply these changes for freshly started node and after each restart.
+These changes do not persist across system restarts. To apply them automatically on boot, add the following in `/etc/sysctl.d/local.conf`:
 
+```bash
+net.core.rmem_max = 8388608
+net.core.wmem_max = 8388608
+net.ipv4.tcp_rmem = 4096 87380 8388608
+net.ipv4.tcp_wmem = 4096 16384 8388608
+net.ipv4.tcp_slow_start_after_idle = 0
+```
 
 ### 4.3 Read-only node instruction
 
@@ -166,7 +173,6 @@ You just need to update `account_id` with your pool account id.
 
 We need to help node see the new `validator_key.json` file.
 If you changed anything there, please restart your node.
-Do not forget to reapply [network optimizations](#42-network-optimizations).
 
 Then, it's a core's team responsibility to stake into your pool.
 We review the list of active pools at least once a day.
